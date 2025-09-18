@@ -12,15 +12,21 @@ class SystemLog extends Model
     protected $fillable = [
         'type',
         'user_id',
-        'data',
+        'metadata',
         'description',
         'ip_address',
         'user_agent',
         'level',
+        'action',
+        'execution_time',
+        'request_data',
+        'response_data',
     ];
 
     protected $casts = [
-        'data' => 'array',
+        'metadata' => 'array',
+        'request_data' => 'array',
+        'response_data' => 'array',
     ];
 
     const LEVEL_INFO = 'info';
@@ -116,8 +122,9 @@ class SystemLog extends Model
         return static::create([
             'type' => $type,
             'user_id' => $userId ?: auth()->id(),
+            'action' => $type,
             'description' => $description,
-            'data' => $data,
+            'metadata' => $data,
             'level' => $level,
             'ip_address' => request()->ip(),
             'user_agent' => request()->userAgent(),

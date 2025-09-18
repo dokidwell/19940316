@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Log;
 
 class PointsService
 {
-    const PRECISION = 8;
-    const MIN_TRANSACTION = 0.00000001;
+    const PRECISION = 6;
+    const MIN_TRANSACTION = 0.000001;
     const MAX_DAILY_EARNING = 1000.00000000;
 
     protected $transactionTypes = [
@@ -70,11 +70,14 @@ class PointsService
                 ];
             });
 
+        $transactionCount = PointTransaction::where('user_id', $user->id)->count();
+
         return [
             'current_balance' => number_format($currentBalance, self::PRECISION, '.', ''),
             'total_earned' => number_format($totalEarned, self::PRECISION, '.', ''),
             'total_spent' => number_format($totalSpent, self::PRECISION, '.', ''),
             'today_earnings' => number_format($todayEarnings, self::PRECISION, '.', ''),
+            'transaction_count' => $transactionCount,
             'recent_transactions' => $recentTransactions,
             'whale_multiplier' => $user->getWhaleRewardMultiplier(),
             'verification_level' => $user->verification_level ?? 1,
@@ -103,8 +106,8 @@ class PointsService
                 'created_at' => $transaction->created_at,
                 'formatted_date' => $transaction->created_at->format('Y-m-d H:i:s'),
                 'is_income' => $transaction->amount > 0,
-                'related_type' => $transaction->related_type,
-                'related_id' => $transaction->related_id,
+                'reference_type' => $transaction->reference_type,
+                'reference_id' => $transaction->reference_id,
                 'metadata' => $transaction->metadata,
             ];
         });
@@ -115,14 +118,36 @@ class PointsService
     public function addPoints(User $user, $amount, $type, $description = null, $relatedModel = null, $metadata = [])
     {
         if ($amount <= 0) {
-            throw new \InvalidArgumentException('奖励金额必须大于0');
+            return [
+                'success' => false,
+                'message' => '奖励金额必须大于0'
+            ];
         }
 
         if ($amount < self::MIN_TRANSACTION) {
-            throw new \InvalidArgumentException('交易金额过小');
+            return [
+                'success' => false,
+                'message' => '交易金额过小',
+                'min_amount' => self::MIN_TRANSACTION
+            ];
         }
 
         $amount = round($amount, self::PRECISION);
+
+        // 检查每日获得限额
+        $todayEarnings = PointTransaction::where('user_id', $user->id)
+            ->where('type', 'earn')
+            ->whereDate('created_at', today())
+            ->sum('amount');
+
+        if ($todayEarnings + $amount > self::MAX_DAILY_EARNING) {
+            return [
+                'success' => false,
+                'message' => '超过每日获得上限',
+                'daily_limit' => self::MAX_DAILY_EARNING,
+                'today_earned' => $todayEarnings
+            ];
+        }
 
         return DB::transaction(function () use ($user, $amount, $type, $description, $relatedModel, $metadata) {
             $user = $user->lockForUpdate()->find($user->id);
@@ -131,12 +156,14 @@ class PointsService
 
             $transaction = PointTransaction::create([
                 'user_id' => $user->id,
-                'type' => $type,
+                'type' => 'earn',
+                'category' => $type,
                 'amount' => $amount,
+                'balance_before' => $user->points_balance,
                 'balance_after' => $newBalance,
                 'description' => $description,
-                'related_type' => $relatedModel ? get_class($relatedModel) : null,
-                'related_id' => $relatedModel ? $relatedModel->id : null,
+                'reference_type' => $relatedModel ? get_class($relatedModel) : null,
+                'reference_id' => $relatedModel ? $relatedModel->id : null,
                 'metadata' => $metadata,
             ]);
 
@@ -147,7 +174,11 @@ class PointsService
 
             $this->logPointsOperation('add', $user, $amount, $type, $description);
 
-            return $transaction;
+            return [
+                'success' => true,
+                'transaction' => $transaction,
+                'new_balance' => $newBalance
+            ];
         });
     }
 
@@ -167,19 +198,25 @@ class PointsService
             $user = $user->lockForUpdate()->find($user->id);
 
             if ($user->points_balance < $amount) {
-                throw new \Exception('积分余额不足');
+                return [
+                    'success' => false,
+                    'message' => '积分余额不足',
+                    'current_balance' => $user->points_balance
+                ];
             }
 
             $newBalance = $user->points_balance - $amount;
 
             $transaction = PointTransaction::create([
                 'user_id' => $user->id,
-                'type' => $type,
+                'type' => 'spend',
+                'category' => $type,
                 'amount' => -$amount,
+                'balance_before' => $user->points_balance,
                 'balance_after' => $newBalance,
                 'description' => $description,
-                'related_type' => $relatedModel ? get_class($relatedModel) : null,
-                'related_id' => $relatedModel ? $relatedModel->id : null,
+                'reference_type' => $relatedModel ? get_class($relatedModel) : null,
+                'reference_id' => $relatedModel ? $relatedModel->id : null,
                 'metadata' => $metadata,
             ]);
 
@@ -190,8 +227,17 @@ class PointsService
 
             $this->logPointsOperation('subtract', $user, $amount, $type, $description);
 
-            return $transaction;
+            return [
+                'success' => true,
+                'transaction' => $transaction,
+                'new_balance' => $newBalance
+            ];
         });
+    }
+
+    public function deductPoints(User $user, $amount, $type, $description = null, $relatedModel = null, $metadata = [])
+    {
+        return $this->subtractPoints($user, $amount, $type, $description, $relatedModel, $metadata);
     }
 
     public function transferPoints(User $fromUser, User $toUser, $amount, $description = null)
@@ -207,11 +253,11 @@ class PointsService
         $amount = round($amount, self::PRECISION);
 
         return DB::transaction(function () use ($fromUser, $toUser, $amount, $description) {
-            $this->subtractPoints($fromUser, $amount, 'transfer_out', $description, $toUser);
-            $this->addPoints($toUser, $amount, 'transfer_in', $description, $fromUser);
+            $this->subtractPoints($fromUser, $amount, 'purchase', $description, $toUser);
+            $this->addPoints($toUser, $amount, 'reward', $description, $fromUser);
 
             SystemLog::logUserAction(
-                'points_transfer',
+                'point_transaction',
                 "积分转账: {$amount}",
                 [
                     'from_user_id' => $fromUser->id,
@@ -221,6 +267,13 @@ class PointsService
                 ],
                 $fromUser->id
             );
+
+            return [
+                'success' => true,
+                'amount' => $amount,
+                'from_balance' => $fromUser->fresh()->points_balance,
+                'to_balance' => $toUser->fresh()->points_balance
+            ];
         });
     }
 
@@ -444,5 +497,46 @@ class PointsService
                     'is_income' => $transaction->amount > 0,
                 ];
             });
+    }
+
+    public function getPublicPoolStats()
+    {
+        return [
+            'total_balance' => PointTransaction::where('type', 'public_pool_income')->sum('amount'),
+            'daily_distribution' => PointTransaction::where('type', 'public_pool_expense')
+                ->whereDate('created_at', today())
+                ->sum('amount'),
+            'total_users' => User::where('points_balance', '>', 0)->count(),
+            'average_balance' => User::where('points_balance', '>', 0)->avg('points_balance')
+        ];
+    }
+
+    public function getTransparencyDashboard()
+    {
+        return [
+            'total_transactions' => PointTransaction::count(),
+            'total_users' => User::count(),
+            'total_points_circulation' => User::sum('points_balance'),
+            'recent_transactions' => PointTransaction::with('user')
+                ->orderBy('created_at', 'desc')
+                ->limit(10)
+                ->get(),
+            'daily_stats' => [
+                'earned_today' => PointTransaction::where('type', 'earn')
+                    ->whereDate('created_at', today())
+                    ->sum('amount'),
+                'spent_today' => PointTransaction::where('type', 'spend')
+                    ->whereDate('created_at', today())
+                    ->sum('amount'),
+            ]
+        ];
+    }
+
+    public function getLeaderboard($limit = 10)
+    {
+        return User::where('points_balance', '>', 0)
+            ->orderBy('points_balance', 'desc')
+            ->limit($limit)
+            ->get();
     }
 }

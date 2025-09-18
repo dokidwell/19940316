@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/yadangzhouji/Desktop/hoho-new/app/Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/Users/yadangzhouji/Desktop/hoho-new/app</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Services</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="FileUploadService.php.html#14">App\Services\FileUploadService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#14">App\Services\TransparencyService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#11">App\Services\UserService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#8">App\Services\TaskCenterService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#9">App\Services\WhaleMarketDataService</a></td><td class="text-right">1%</td></tr>
+       <tr><td><a href="WhaleService.php.html#13">App\Services\WhaleService</a></td><td class="text-right">2%</td></tr>
+       <tr><td><a href="SmsService.php.html#11">App\Services\SmsService</a></td><td class="text-right">2%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#10">App\Services\TencentCloudService</a></td><td class="text-right">3%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#13">App\Services\GovernanceService</a></td><td class="text-right">5%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#10">App\Services\WhalePricingService</a></td><td class="text-right">18%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#12">App\Services\WhaleRewardService</a></td><td class="text-right">22%</td></tr>
+       <tr><td><a href="PointsService.php.html#12">App\Services\PointsService</a></td><td class="text-right">51%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="FileUploadService.php.html#14">App\Services\FileUploadService</a></td><td class="text-right">4422</td></tr>
+       <tr><td><a href="GovernanceService.php.html#13">App\Services\GovernanceService</a></td><td class="text-right">2829</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#8">App\Services\TaskCenterService</a></td><td class="text-right">2601</td></tr>
+       <tr><td><a href="SmsService.php.html#11">App\Services\SmsService</a></td><td class="text-right">2356</td></tr>
+       <tr><td><a href="UserService.php.html#11">App\Services\UserService</a></td><td class="text-right">1789</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#10">App\Services\TencentCloudService</a></td><td class="text-right">1625</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#9">App\Services\WhaleMarketDataService</a></td><td class="text-right">1417</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#10">App\Services\WhalePricingService</a></td><td class="text-right">1174</td></tr>
+       <tr><td><a href="WhaleService.php.html#13">App\Services\WhaleService</a></td><td class="text-right">1107</td></tr>
+       <tr><td><a href="TransparencyService.php.html#14">App\Services\TransparencyService</a></td><td class="text-right">1056</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#12">App\Services\WhaleRewardService</a></td><td class="text-right">1039</td></tr>
+       <tr><td><a href="PointsService.php.html#12">App\Services\PointsService</a></td><td class="text-right">270</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="FileUploadService.php.html#23"><abbr title="App\Services\FileUploadService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#29"><abbr title="App\Services\FileUploadService::loadConfig">loadConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#50"><abbr title="App\Services\FileUploadService::uploadArtwork">uploadArtwork</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#85"><abbr title="App\Services\FileUploadService::uploadAvatar">uploadAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#109"><abbr title="App\Services\FileUploadService::uploadWhaleAvatar">uploadWhaleAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#135"><abbr title="App\Services\FileUploadService::uploadBanner">uploadBanner</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#165"><abbr title="App\Services\FileUploadService::processFileUpload">processFileUpload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#184"><abbr title="App\Services\FileUploadService::uploadGeneral">uploadGeneral</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#213"><abbr title="App\Services\FileUploadService::generateThumbnails">generateThumbnails</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#240"><abbr title="App\Services\FileUploadService::validateFile">validateFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#264"><abbr title="App\Services\FileUploadService::validateArtworkFile">validateArtworkFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#280"><abbr title="App\Services\FileUploadService::validateImageFile">validateImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#305"><abbr title="App\Services\FileUploadService::validateVideoFile">validateVideoFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#320"><abbr title="App\Services\FileUploadService::validateAudioFile">validateAudioFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#335"><abbr title="App\Services\FileUploadService::validateAvatarFile">validateAvatarFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#346"><abbr title="App\Services\FileUploadService::getFileType">getFileType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#363"><abbr title="App\Services\FileUploadService::isImageFile">isImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#368"><abbr title="App\Services\FileUploadService::logUpload">logUpload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#384"><abbr title="App\Services\FileUploadService::deleteFile">deleteFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#409"><abbr title="App\Services\FileUploadService::getUploadToken">getUploadToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#417"><abbr title="App\Services\FileUploadService::getUploadDirectory">getUploadDirectory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#431"><abbr title="App\Services\FileUploadService::getFileInfo">getFileInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#436"><abbr title="App\Services\FileUploadService::getFileUrl">getFileUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#441"><abbr title="App\Services\FileUploadService::getUserStorageStats">getUserStorageStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#458"><abbr title="App\Services\FileUploadService::getAllowedTypes">getAllowedTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FileUploadService.php.html#468"><abbr title="App\Services\FileUploadService::getUploadLimits">getUploadLimits</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#72"><abbr title="App\Services\GovernanceService::approveProposal">approveProposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#114"><abbr title="App\Services\GovernanceService::rejectProposal">rejectProposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#156"><abbr title="App\Services\GovernanceService::castVote">castVote</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#207"><abbr title="App\Services\GovernanceService::finalizeProposal">finalizeProposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#260"><abbr title="App\Services\GovernanceService::processProposalRewards">processProposalRewards</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#301"><abbr title="App\Services\GovernanceService::updateProposalVoteCounts">updateProposalVoteCounts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#342"><abbr title="App\Services\GovernanceService::validateVotingPermission">validateVotingPermission</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#380"><abbr title="App\Services\GovernanceService::getActiveProposals">getActiveProposals</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#389"><abbr title="App\Services\GovernanceService::getProposalHistory">getProposalHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#398"><abbr title="App\Services\GovernanceService::getUserVotingHistory">getUserVotingHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#407"><abbr title="App\Services\GovernanceService::getGovernanceStats">getGovernanceStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#426"><abbr title="App\Services\GovernanceService::calculateAverageVotingParticipation">calculateAverageVotingParticipation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#446"><abbr title="App\Services\GovernanceService::getVotingPowerDistribution">getVotingPowerDistribution</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#495"><abbr title="App\Services\GovernanceService::canUserVoteOnProposal">canUserVoteOnProposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#510"><abbr title="App\Services\GovernanceService::getMaxVoteStrengthForUser">getMaxVoteStrengthForUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#40"><abbr title="App\Services\PointsService::getUserBalance">getUserBalance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#87"><abbr title="App\Services\PointsService::getTransactionHistory">getTransactionHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#280"><abbr title="App\Services\PointsService::burnPoints">burnPoints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#310"><abbr title="App\Services\PointsService::getSystemStats">getSystemStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#350"><abbr title="App\Services\PointsService::getPublicPoolBalance">getPublicPoolBalance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#358"><abbr title="App\Services\PointsService::addToPublicPool">addToPublicPool</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#387"><abbr title="App\Services\PointsService::subtractFromPublicPool">subtractFromPublicPool</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#418"><abbr title="App\Services\PointsService::getDailyStats">getDailyStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#452"><abbr title="App\Services\PointsService::getTransactionTypes">getTransactionTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#457"><abbr title="App\Services\PointsService::validateAmount">validateAmount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#474"><abbr title="App\Services\PointsService::formatAmount">formatAmount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointsService.php.html#479"><abbr title="App\Services\PointsService::getRecentActivity">getRecentActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#37"><abbr title="App\Services\SmsService::sendVerificationCode">sendVerificationCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#88"><abbr title="App\Services\SmsService::verifyCode">verifyCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#142"><abbr title="App\Services\SmsService::sendWelcomeMessage">sendWelcomeMessage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#177"><abbr title="App\Services\SmsService::sendNotification">sendNotification</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#213"><abbr title="App\Services\SmsService::sendSms">sendSms</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#240"><abbr title="App\Services\SmsService::generateVerificationCode">generateVerificationCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#245"><abbr title="App\Services\SmsService::storeVerificationCode">storeVerificationCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#259"><abbr title="App\Services\SmsService::checkSendLimit">checkSendLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#282"><abbr title="App\Services\SmsService::recordVerificationAttempt">recordVerificationAttempt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#311"><abbr title="App\Services\SmsService::maskPhone">maskPhone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#320"><abbr title="App\Services\SmsService::validatePhoneFormat">validatePhoneFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#336"><abbr title="App\Services\SmsService::isPhoneLocked">isPhoneLocked</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#342"><abbr title="App\Services\SmsService::getRemainingAttempts">getRemainingAttempts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#349"><abbr title="App\Services\SmsService::canSendSms">canSendSms</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#384"><abbr title="App\Services\SmsService::getVerificationStatus">getVerificationStatus</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#406"><abbr title="App\Services\SmsService::bindPhoneToUser">bindPhoneToUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#458"><abbr title="App\Services\SmsService::getSmsStats">getSmsStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SmsService.php.html#472"><abbr title="App\Services\SmsService::sendBatchSms">sendBatchSms</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#19"><abbr title="App\Services\TaskCenterService::getUserTasks">getUserTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#40"><abbr title="App\Services\TaskCenterService::getDailyTasks">getDailyTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#98"><abbr title="App\Services\TaskCenterService::getOnetimeTasks">getOnetimeTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#157"><abbr title="App\Services\TaskCenterService::getOngoingTasks">getOngoingTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#266"><abbr title="App\Services\TaskCenterService::getWhaleTasks">getWhaleTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#320"><abbr title="App\Services\TaskCenterService::checkProfileCompletion">checkProfileCompletion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#344"><abbr title="App\Services\TaskCenterService::getFieldDisplayName">getFieldDisplayName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#356"><abbr title="App\Services\TaskCenterService::getNextMilestone">getNextMilestone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#366"><abbr title="App\Services\TaskCenterService::calculateMilestoneReward">calculateMilestoneReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#372"><abbr title="App\Services\TaskCenterService::isUsingWhaleAvatar">isUsingWhaleAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#380"><abbr title="App\Services\TaskCenterService::sortTasks">sortTasks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#402"><abbr title="App\Services\TaskCenterService::getTaskStats">getTaskStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#434"><abbr title="App\Services\TaskCenterService::getTaskCategories">getTaskCategories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#446"><abbr title="App\Services\TaskCenterService::getTaskDifficulties">getTaskDifficulties</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#45"><abbr title="App\Services\TencentCloudService::uploadFile">uploadFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#93"><abbr title="App\Services\TencentCloudService::uploadArtwork">uploadArtwork</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#109"><abbr title="App\Services\TencentCloudService::uploadAvatar">uploadAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#125"><abbr title="App\Services\TencentCloudService::uploadWhaleAvatar">uploadWhaleAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#184"><abbr title="App\Services\TencentCloudService::performUpload">performUpload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#194"><abbr title="App\Services\TencentCloudService::performDirectUpload">performDirectUpload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#216"><abbr title="App\Services\TencentCloudService::deleteFile">deleteFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#240"><abbr title="App\Services\TencentCloudService::getFileUrl">getFileUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#249"><abbr title="App\Services\TencentCloudService::generateThumbnail">generateThumbnail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#275"><abbr title="App\Services\TencentCloudService::listFiles">listFiles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#296"><abbr title="App\Services\TencentCloudService::getFileInfo">getFileInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#320"><abbr title="App\Services\TencentCloudService::validateFile">validateFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#344"><abbr title="App\Services\TencentCloudService::generateFilename">generateFilename</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#353"><abbr title="App\Services\TencentCloudService::isImageFile">isImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#361"><abbr title="App\Services\TencentCloudService::getImageProcessOptions">getImageProcessOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#377"><abbr title="App\Services\TencentCloudService::getUploadToken">getUploadToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#397"><abbr title="App\Services\TencentCloudService::getDownloadUrl">getDownloadUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#405"><abbr title="App\Services\TencentCloudService::getBatchUploadTokens">getBatchUploadTokens</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#416"><abbr title="App\Services\TencentCloudService::getStorageStats">getStorageStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#38"><abbr title="App\Services\TransparencyService::getPublicStats">getPublicStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#74"><abbr title="App\Services\TransparencyService::getRecentEvents">getRecentEvents</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#103"><abbr title="App\Services\TransparencyService::formatEventForPublic">formatEventForPublic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#122"><abbr title="App\Services\TransparencyService::maskUserName">maskUserName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#135"><abbr title="App\Services\TransparencyService::sanitizeEventData">sanitizeEventData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#160"><abbr title="App\Services\TransparencyService::getPointsFlowAnalysis">getPointsFlowAnalysis</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#216"><abbr title="App\Services\TransparencyService::getGovernanceActivity">getGovernanceActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#256"><abbr title="App\Services\TransparencyService::getMarketplaceActivity">getMarketplaceActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#304"><abbr title="App\Services\TransparencyService::getWhaleActivity">getWhaleActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#347"><abbr title="App\Services\TransparencyService::getPublicPoolBalance">getPublicPoolBalance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#355"><abbr title="App\Services\TransparencyService::search">search</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#384"><abbr title="App\Services\TransparencyService::getEventTypes">getEventTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#389"><abbr title="App\Services\TransparencyService::exportTransparencyData">exportTransparencyData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TransparencyService.php.html#424"><abbr title="App\Services\TransparencyService::convertToCsv">convertToCsv</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#20"><abbr title="App\Services\UserService::createUser">createUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#51"><abbr title="App\Services\UserService::updateProfile">updateProfile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#88"><abbr title="App\Services\UserService::changePassword">changePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#108"><abbr title="App\Services\UserService::updateSettings">updateSettings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#149"><abbr title="App\Services\UserService::generateHohoId">generateHohoId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#158"><abbr title="App\Services\UserService::getUserStats">getUserStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#208"><abbr title="App\Services\UserService::getUserRanking">getUserRanking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#237"><abbr title="App\Services\UserService::getActivityHistory">getActivityHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#272"><abbr title="App\Services\UserService::getUserAchievements">getUserAchievements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#331"><abbr title="App\Services\UserService::deactivateUser">deactivateUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#348"><abbr title="App\Services\UserService::reactivateUser">reactivateUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#365"><abbr title="App\Services\UserService::searchUsers">searchUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#377"><abbr title="App\Services\UserService::getLeaderboard">getLeaderboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UserService.php.html#442"><abbr title="App\Services\UserService::getUserProfile">getUserProfile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#22"><abbr title="App\Services\WhaleMarketDataService::getFloorPrice">getFloorPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#47"><abbr title="App\Services\WhaleMarketDataService::getMarketCap">getMarketCap</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#72"><abbr title="App\Services\WhaleMarketDataService::getTradingVolume24h">getTradingVolume24h</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#98"><abbr title="App\Services\WhaleMarketDataService::getHolderCount">getHolderCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#123"><abbr title="App\Services\WhaleMarketDataService::getCollectionStats">getCollectionStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#160"><abbr title="App\Services\WhaleMarketDataService::getBatchCollectionStats">getBatchCollectionStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#193"><abbr title="App\Services\WhaleMarketDataService::makeMarketApiRequest">makeMarketApiRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#219"><abbr title="App\Services\WhaleMarketDataService::getEstimatedFloorPrice">getEstimatedFloorPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#234"><abbr title="App\Services\WhaleMarketDataService::getEstimatedStats">getEstimatedStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#254"><abbr title="App\Services\WhaleMarketDataService::refreshAllMarketData">refreshAllMarketData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#300"><abbr title="App\Services\WhaleMarketDataService::getMarketTrends">getMarketTrends</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#325"><abbr title="App\Services\WhaleMarketDataService::clearMarketDataCache">clearMarketDataCache</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#61"><abbr title="App\Services\WhalePricingService::calculateNftValue">calculateNftValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#115"><abbr title="App\Services\WhalePricingService::gatherCollectionMetrics">gatherCollectionMetrics</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#133"><abbr title="App\Services\WhalePricingService::calculateBaseValue">calculateBaseValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#143"><abbr title="App\Services\WhalePricingService::getRarityMultiplier">getRarityMultiplier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#148"><abbr title="App\Services\WhalePricingService::calculateTimeDecayFactor">calculateTimeDecayFactor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#164"><abbr title="App\Services\WhalePricingService::calculateMarketMultiplier">calculateMarketMultiplier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#179"><abbr title="App\Services\WhalePricingService::applyVolatilityProtection">applyVolatilityProtection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#224"><abbr title="App\Services\WhalePricingService::isHohoCollection">isHohoCollection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#229"><abbr title="App\Services\WhalePricingService::determineRarity">determineRarity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#241"><abbr title="App\Services\WhalePricingService::parsePrice">parsePrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#251"><abbr title="App\Services\WhalePricingService::parseDate">parseDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#260"><abbr title="App\Services\WhalePricingService::logPricingCalculation">logPricingCalculation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#269"><abbr title="App\Services\WhalePricingService::updatePricingConfig">updatePricingConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#295"><abbr title="App\Services\WhalePricingService::validatePricingConfig">validatePricingConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#314"><abbr title="App\Services\WhalePricingService::getPricingConfig">getPricingConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#319"><abbr title="App\Services\WhalePricingService::getCollectionPriceHistory">getCollectionPriceHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#327"><abbr title="App\Services\WhalePricingService::calculateBatchRewards">calculateBatchRewards</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#58"><abbr title="App\Services\WhaleRewardService::calculateBindingReward">calculateBindingReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#83"><abbr title="App\Services\WhaleRewardService::calculateDailyCheckinReward">calculateDailyCheckinReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#98"><abbr title="App\Services\WhaleRewardService::calculateNftAirdropReward">calculateNftAirdropReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#151"><abbr title="App\Services\WhaleRewardService::processArtworkInteractionReward">processArtworkInteractionReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#173"><abbr title="App\Services\WhaleRewardService::processDailyCheckin">processDailyCheckin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#205"><abbr title="App\Services\WhaleRewardService::processBatchNftAirdrop">processBatchNftAirdrop</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#261"><abbr title="App\Services\WhaleRewardService::syncAndRewardUser">syncAndRewardUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#289"><abbr title="App\Services\WhaleRewardService::determineCollectionRarity">determineCollectionRarity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#301"><abbr title="App\Services\WhaleRewardService::isUsingWhaleAvatar">isUsingWhaleAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#311"><abbr title="App\Services\WhaleRewardService::logAirdropReward">logAirdropReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#325"><abbr title="App\Services\WhaleRewardService::getRewardHistory">getRewardHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#366"><abbr title="App\Services\WhaleRewardService::updateRewardConfig">updateRewardConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#381"><abbr title="App\Services\WhaleRewardService::getRewardConfig">getRewardConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#30"><abbr title="App\Services\WhaleService::getAuthUrl">getAuthUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#45"><abbr title="App\Services\WhaleService::exchangeCodeForToken">exchangeCodeForToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#84"><abbr title="App\Services\WhaleService::getUserInfo">getUserInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#113"><abbr title="App\Services\WhaleService::getUserCollections">getUserCollections</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#151"><abbr title="App\Services\WhaleService::bindUserAccount">bindUserAccount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#203"><abbr title="App\Services\WhaleService::syncUserCollections">syncUserCollections</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#240"><abbr title="App\Services\WhaleService::calculateNftValue">calculateNftValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#246"><abbr title="App\Services\WhaleService::determineRarity">determineRarity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#258"><abbr title="App\Services\WhaleService::calculateBindingReward">calculateBindingReward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#264"><abbr title="App\Services\WhaleService::refreshUserData">refreshUserData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleService.php.html#296"><abbr title="App\Services\WhaleService::syncAllAccounts">syncAllAccounts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#26"><abbr title="App\Services\GovernanceService::createProposal">createProposal</abbr></a></td><td class="text-right">9%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#319"><abbr title="App\Services\GovernanceService::validateProposalCreationPermission">validateProposalCreationPermission</abbr></a></td><td class="text-right">37%</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#26"><abbr title="App\Services\TencentCloudService::initializeCosClient">initializeCosClient</abbr></a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="GovernanceService.php.html#485"><abbr title="App\Services\GovernanceService::canUserCreateProposal">canUserCreateProposal</abbr></a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="UserService.php.html#51"><abbr title="App\Services\UserService::updateProfile">updateProfile</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#98"><abbr title="App\Services\WhaleRewardService::calculateNftAirdropReward">calculateNftAirdropReward</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#40"><abbr title="App\Services\TaskCenterService::getDailyTasks">getDailyTasks</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#320"><abbr title="App\Services\TaskCenterService::checkProfileCompletion">checkProfileCompletion</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="FileUploadService.php.html#280"><abbr title="App\Services\FileUploadService::validateImageFile">validateImageFile</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="GovernanceService.php.html#207"><abbr title="App\Services\GovernanceService::finalizeProposal">finalizeProposal</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="TransparencyService.php.html#135"><abbr title="App\Services\TransparencyService::sanitizeEventData">sanitizeEventData</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#295"><abbr title="App\Services\WhalePricingService::validatePricingConfig">validatePricingConfig</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="FileUploadService.php.html#165"><abbr title="App\Services\FileUploadService::processFileUpload">processFileUpload</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="GovernanceService.php.html#342"><abbr title="App\Services\GovernanceService::validateVotingPermission">validateVotingPermission</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#157"><abbr title="App\Services\TaskCenterService::getOngoingTasks">getOngoingTasks</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#402"><abbr title="App\Services\TaskCenterService::getTaskStats">getTaskStats</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="UserService.php.html#108"><abbr title="App\Services\UserService::updateSettings">updateSettings</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="UserService.php.html#272"><abbr title="App\Services\UserService::getUserAchievements">getUserAchievements</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#160"><abbr title="App\Services\WhaleMarketDataService::getBatchCollectionStats">getBatchCollectionStats</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#193"><abbr title="App\Services\WhaleMarketDataService::makeMarketApiRequest">makeMarketApiRequest</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#179"><abbr title="App\Services\WhalePricingService::applyVolatilityProtection">applyVolatilityProtection</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="FileUploadService.php.html#346"><abbr title="App\Services\FileUploadService::getFileType">getFileType</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="FileUploadService.php.html#417"><abbr title="App\Services\FileUploadService::getUploadDirectory">getUploadDirectory</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="GovernanceService.php.html#260"><abbr title="App\Services\GovernanceService::processProposalRewards">processProposalRewards</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="GovernanceService.php.html#426"><abbr title="App\Services\GovernanceService::calculateAverageVotingParticipation">calculateAverageVotingParticipation</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="UserService.php.html#377"><abbr title="App\Services\UserService::getLeaderboard">getLeaderboard</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#229"><abbr title="App\Services\WhalePricingService::determineRarity">determineRarity</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#205"><abbr title="App\Services\WhaleRewardService::processBatchNftAirdrop">processBatchNftAirdrop</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#289"><abbr title="App\Services\WhaleRewardService::determineCollectionRarity">determineCollectionRarity</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="WhaleService.php.html#246"><abbr title="App\Services\WhaleService::determineRarity">determineRarity</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="FileUploadService.php.html#240"><abbr title="App\Services\FileUploadService::validateFile">validateFile</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="FileUploadService.php.html#264"><abbr title="App\Services\FileUploadService::validateArtworkFile">validateArtworkFile</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="GovernanceService.php.html#72"><abbr title="App\Services\GovernanceService::approveProposal">approveProposal</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="PointsService.php.html#457"><abbr title="App\Services\PointsService::validateAmount">validateAmount</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SmsService.php.html#88"><abbr title="App\Services\SmsService::verifyCode">verifyCode</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SmsService.php.html#177"><abbr title="App\Services\SmsService::sendNotification">sendNotification</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SmsService.php.html#349"><abbr title="App\Services\SmsService::canSendSms">canSendSms</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SmsService.php.html#406"><abbr title="App\Services\SmsService::bindPhoneToUser">bindPhoneToUser</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SmsService.php.html#472"><abbr title="App\Services\SmsService::sendBatchSms">sendBatchSms</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#266"><abbr title="App\Services\TaskCenterService::getWhaleTasks">getWhaleTasks</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#320"><abbr title="App\Services\TencentCloudService::validateFile">validateFile</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="TransparencyService.php.html#74"><abbr title="App\Services\TransparencyService::getRecentEvents">getRecentEvents</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#327"><abbr title="App\Services\WhalePricingService::calculateBatchRewards">calculateBatchRewards</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#83"><abbr title="App\Services\WhaleRewardService::calculateDailyCheckinReward">calculateDailyCheckinReward</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#261"><abbr title="App\Services\WhaleRewardService::syncAndRewardUser">syncAndRewardUser</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#301"><abbr title="App\Services\WhaleRewardService::isUsingWhaleAvatar">isUsingWhaleAvatar</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleService.php.html#45"><abbr title="App\Services\WhaleService::exchangeCodeForToken">exchangeCodeForToken</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleService.php.html#84"><abbr title="App\Services\WhaleService::getUserInfo">getUserInfo</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleService.php.html#113"><abbr title="App\Services\WhaleService::getUserCollections">getUserCollections</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="WhaleService.php.html#264"><abbr title="App\Services\WhaleService::refreshUserData">refreshUserData</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="FileUploadService.php.html#50"><abbr title="App\Services\FileUploadService::uploadArtwork">uploadArtwork</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="FileUploadService.php.html#213"><abbr title="App\Services\FileUploadService::generateThumbnails">generateThumbnails</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="FileUploadService.php.html#305"><abbr title="App\Services\FileUploadService::validateVideoFile">validateVideoFile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="FileUploadService.php.html#320"><abbr title="App\Services\FileUploadService::validateAudioFile">validateAudioFile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="GovernanceService.php.html#114"><abbr title="App\Services\GovernanceService::rejectProposal">rejectProposal</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="GovernanceService.php.html#446"><abbr title="App\Services\GovernanceService::getVotingPowerDistribution">getVotingPowerDistribution</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="PointsService.php.html#87"><abbr title="App\Services\PointsService::getTransactionHistory">getTransactionHistory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SmsService.php.html#37"><abbr title="App\Services\SmsService::sendVerificationCode">sendVerificationCode</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SmsService.php.html#142"><abbr title="App\Services\SmsService::sendWelcomeMessage">sendWelcomeMessage</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SmsService.php.html#259"><abbr title="App\Services\SmsService::checkSendLimit">checkSendLimit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SmsService.php.html#282"><abbr title="App\Services\SmsService::recordVerificationAttempt">recordVerificationAttempt</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#98"><abbr title="App\Services\TaskCenterService::getOnetimeTasks">getOnetimeTasks</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#356"><abbr title="App\Services\TaskCenterService::getNextMilestone">getNextMilestone</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#372"><abbr title="App\Services\TaskCenterService::isUsingWhaleAvatar">isUsingWhaleAvatar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#380"><abbr title="App\Services\TaskCenterService::sortTasks">sortTasks</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#45"><abbr title="App\Services\TencentCloudService::uploadFile">uploadFile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#93"><abbr title="App\Services\TencentCloudService::uploadArtwork">uploadArtwork</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#125"><abbr title="App\Services\TencentCloudService::uploadWhaleAvatar">uploadWhaleAvatar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#361"><abbr title="App\Services\TencentCloudService::getImageProcessOptions">getImageProcessOptions</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TransparencyService.php.html#355"><abbr title="App\Services\TransparencyService::search">search</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TransparencyService.php.html#424"><abbr title="App\Services\TransparencyService::convertToCsv">convertToCsv</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UserService.php.html#442"><abbr title="App\Services\UserService::getUserProfile">getUserProfile</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#22"><abbr title="App\Services\WhaleMarketDataService::getFloorPrice">getFloorPrice</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#47"><abbr title="App\Services\WhaleMarketDataService::getMarketCap">getMarketCap</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#72"><abbr title="App\Services\WhaleMarketDataService::getTradingVolume24h">getTradingVolume24h</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#98"><abbr title="App\Services\WhaleMarketDataService::getHolderCount">getHolderCount</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#123"><abbr title="App\Services\WhaleMarketDataService::getCollectionStats">getCollectionStats</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#254"><abbr title="App\Services\WhaleMarketDataService::refreshAllMarketData">refreshAllMarketData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#325"><abbr title="App\Services\WhaleMarketDataService::clearMarketDataCache">clearMarketDataCache</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#61"><abbr title="App\Services\WhalePricingService::calculateNftValue">calculateNftValue</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#164"><abbr title="App\Services\WhalePricingService::calculateMarketMultiplier">calculateMarketMultiplier</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#241"><abbr title="App\Services\WhalePricingService::parsePrice">parsePrice</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#58"><abbr title="App\Services\WhaleRewardService::calculateBindingReward">calculateBindingReward</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#173"><abbr title="App\Services\WhaleRewardService::processDailyCheckin">processDailyCheckin</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleService.php.html#151"><abbr title="App\Services\WhaleService::bindUserAccount">bindUserAccount</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleService.php.html#296"><abbr title="App\Services\WhaleService::syncAllAccounts">syncAllAccounts</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="GovernanceService.php.html#319"><abbr title="App\Services\GovernanceService::validateProposalCreationPermission">validateProposalCreationPermission</abbr></a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="FileUploadService.php.html#85"><abbr title="App\Services\FileUploadService::uploadAvatar">uploadAvatar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#109"><abbr title="App\Services\FileUploadService::uploadWhaleAvatar">uploadWhaleAvatar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#135"><abbr title="App\Services\FileUploadService::uploadBanner">uploadBanner</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#184"><abbr title="App\Services\FileUploadService::uploadGeneral">uploadGeneral</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#335"><abbr title="App\Services\FileUploadService::validateAvatarFile">validateAvatarFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#384"><abbr title="App\Services\FileUploadService::deleteFile">deleteFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FileUploadService.php.html#409"><abbr title="App\Services\FileUploadService::getUploadToken">getUploadToken</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="GovernanceService.php.html#156"><abbr title="App\Services\GovernanceService::castVote">castVote</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="GovernanceService.php.html#495"><abbr title="App\Services\GovernanceService::canUserVoteOnProposal">canUserVoteOnProposal</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="PointsService.php.html#280"><abbr title="App\Services\PointsService::burnPoints">burnPoints</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="PointsService.php.html#358"><abbr title="App\Services\PointsService::addToPublicPool">addToPublicPool</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="PointsService.php.html#387"><abbr title="App\Services\PointsService::subtractFromPublicPool">subtractFromPublicPool</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="PointsService.php.html#479"><abbr title="App\Services\PointsService::getRecentActivity">getRecentActivity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="SmsService.php.html#213"><abbr title="App\Services\SmsService::sendSms">sendSms</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="SmsService.php.html#311"><abbr title="App\Services\SmsService::maskPhone">maskPhone</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="SmsService.php.html#320"><abbr title="App\Services\SmsService::validatePhoneFormat">validatePhoneFormat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="SmsService.php.html#384"><abbr title="App\Services\SmsService::getVerificationStatus">getVerificationStatus</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TaskCenterService.php.html#19"><abbr title="App\Services\TaskCenterService::getUserTasks">getUserTasks</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#109"><abbr title="App\Services\TencentCloudService::uploadAvatar">uploadAvatar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#194"><abbr title="App\Services\TencentCloudService::performDirectUpload">performDirectUpload</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#216"><abbr title="App\Services\TencentCloudService::deleteFile">deleteFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#240"><abbr title="App\Services\TencentCloudService::getFileUrl">getFileUrl</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#249"><abbr title="App\Services\TencentCloudService::generateThumbnail">generateThumbnail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#275"><abbr title="App\Services\TencentCloudService::listFiles">listFiles</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#296"><abbr title="App\Services\TencentCloudService::getFileInfo">getFileInfo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#405"><abbr title="App\Services\TencentCloudService::getBatchUploadTokens">getBatchUploadTokens</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TransparencyService.php.html#103"><abbr title="App\Services\TransparencyService::formatEventForPublic">formatEventForPublic</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TransparencyService.php.html#122"><abbr title="App\Services\TransparencyService::maskUserName">maskUserName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TransparencyService.php.html#256"><abbr title="App\Services\TransparencyService::getMarketplaceActivity">getMarketplaceActivity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TransparencyService.php.html#304"><abbr title="App\Services\TransparencyService::getWhaleActivity">getWhaleActivity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TransparencyService.php.html#389"><abbr title="App\Services\TransparencyService::exportTransparencyData">exportTransparencyData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UserService.php.html#88"><abbr title="App\Services\UserService::changePassword">changePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UserService.php.html#158"><abbr title="App\Services\UserService::getUserStats">getUserStats</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UserService.php.html#208"><abbr title="App\Services\UserService::getUserRanking">getUserRanking</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleMarketDataService.php.html#300"><abbr title="App\Services\WhaleMarketDataService::getMarketTrends">getMarketTrends</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#148"><abbr title="App\Services\WhalePricingService::calculateTimeDecayFactor">calculateTimeDecayFactor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#251"><abbr title="App\Services\WhalePricingService::parseDate">parseDate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhalePricingService.php.html#269"><abbr title="App\Services\WhalePricingService::updatePricingConfig">updatePricingConfig</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleRewardService.php.html#151"><abbr title="App\Services\WhaleRewardService::processArtworkInteractionReward">processArtworkInteractionReward</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleService.php.html#30"><abbr title="App\Services\WhaleService::getAuthUrl">getAuthUrl</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleService.php.html#203"><abbr title="App\Services\WhaleService::syncUserCollections">syncUserCollections</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="GovernanceService.php.html#26"><abbr title="App\Services\GovernanceService::createProposal">createProposal</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="TencentCloudService.php.html#26"><abbr title="App\Services\TencentCloudService::initializeCosClient">initializeCosClient</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="GovernanceService.php.html#485"><abbr title="App\Services\GovernanceService::canUserCreateProposal">canUserCreateProposal</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 10.1.16</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.12</a> and <a href="https://phpunit.de/">PHPUnit 10.5.55</a> at Wed Sep 17 23:08:40 UTC 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js?v=10.1.16" type="text/javascript"></script>
+  <script src="../_js/d3.min.js?v=10.1.16" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js?v=10.1.16" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,7,1,1,0,0,1,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([185,1,0,0,1,1,0,0,1,0,3,21], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,66,"<a href=\"FileUploadService.php.html#14\">App\\Services\\FileUploadService<\/a>"],[5.154639175257731,57,"<a href=\"GovernanceService.php.html#13\">App\\Services\\GovernanceService<\/a>"],[51.873198847262245,45,"<a href=\"PointsService.php.html#12\">App\\Services\\PointsService<\/a>"],[2.6490066225165565,50,"<a href=\"SmsService.php.html#11\">App\\Services\\SmsService<\/a>"],[0.6472491909385114,51,"<a href=\"TaskCenterService.php.html#8\">App\\Services\\TaskCenterService<\/a>"],[3.524229074889868,42,"<a href=\"TencentCloudService.php.html#10\">App\\Services\\TencentCloudService<\/a>"],[0,32,"<a href=\"TransparencyService.php.html#14\">App\\Services\\TransparencyService<\/a>"],[0.3067484662576687,42,"<a href=\"UserService.php.html#11\">App\\Services\\UserService<\/a>"],[1.5,38,"<a href=\"WhaleMarketDataService.php.html#9\">App\\Services\\WhaleMarketDataService<\/a>"],[18.90547263681592,46,"<a href=\"WhalePricingService.php.html#10\">App\\Services\\WhalePricingService<\/a>"],[22.270742358078603,46,"<a href=\"WhaleRewardService.php.html#12\">App\\Services\\WhaleRewardService<\/a>"],[2.450980392156863,34,"<a href=\"WhaleService.php.html#13\">App\\Services\\WhaleService<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"FileUploadService.php.html#23\">App\\Services\\FileUploadService::__construct<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#29\">App\\Services\\FileUploadService::loadConfig<\/a>"],[0,3,"<a href=\"FileUploadService.php.html#50\">App\\Services\\FileUploadService::uploadArtwork<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#85\">App\\Services\\FileUploadService::uploadAvatar<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#109\">App\\Services\\FileUploadService::uploadWhaleAvatar<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#135\">App\\Services\\FileUploadService::uploadBanner<\/a>"],[0,6,"<a href=\"FileUploadService.php.html#165\">App\\Services\\FileUploadService::processFileUpload<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#184\">App\\Services\\FileUploadService::uploadGeneral<\/a>"],[0,3,"<a href=\"FileUploadService.php.html#213\">App\\Services\\FileUploadService::generateThumbnails<\/a>"],[0,4,"<a href=\"FileUploadService.php.html#240\">App\\Services\\FileUploadService::validateFile<\/a>"],[0,4,"<a href=\"FileUploadService.php.html#264\">App\\Services\\FileUploadService::validateArtworkFile<\/a>"],[0,7,"<a href=\"FileUploadService.php.html#280\">App\\Services\\FileUploadService::validateImageFile<\/a>"],[0,3,"<a href=\"FileUploadService.php.html#305\">App\\Services\\FileUploadService::validateVideoFile<\/a>"],[0,3,"<a href=\"FileUploadService.php.html#320\">App\\Services\\FileUploadService::validateAudioFile<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#335\">App\\Services\\FileUploadService::validateAvatarFile<\/a>"],[0,5,"<a href=\"FileUploadService.php.html#346\">App\\Services\\FileUploadService::getFileType<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#363\">App\\Services\\FileUploadService::isImageFile<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#368\">App\\Services\\FileUploadService::logUpload<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#384\">App\\Services\\FileUploadService::deleteFile<\/a>"],[0,2,"<a href=\"FileUploadService.php.html#409\">App\\Services\\FileUploadService::getUploadToken<\/a>"],[0,5,"<a href=\"FileUploadService.php.html#417\">App\\Services\\FileUploadService::getUploadDirectory<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#431\">App\\Services\\FileUploadService::getFileInfo<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#436\">App\\Services\\FileUploadService::getFileUrl<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#441\">App\\Services\\FileUploadService::getUserStorageStats<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#458\">App\\Services\\FileUploadService::getAllowedTypes<\/a>"],[0,1,"<a href=\"FileUploadService.php.html#468\">App\\Services\\FileUploadService::getUploadLimits<\/a>"],[100,1,"<a href=\"GovernanceService.php.html#21\">App\\Services\\GovernanceService::__construct<\/a>"],[9.375,2,"<a href=\"GovernanceService.php.html#26\">App\\Services\\GovernanceService::createProposal<\/a>"],[0,4,"<a href=\"GovernanceService.php.html#72\">App\\Services\\GovernanceService::approveProposal<\/a>"],[0,3,"<a href=\"GovernanceService.php.html#114\">App\\Services\\GovernanceService::rejectProposal<\/a>"],[0,2,"<a href=\"GovernanceService.php.html#156\">App\\Services\\GovernanceService::castVote<\/a>"],[0,7,"<a href=\"GovernanceService.php.html#207\">App\\Services\\GovernanceService::finalizeProposal<\/a>"],[0,5,"<a href=\"GovernanceService.php.html#260\">App\\Services\\GovernanceService::processProposalRewards<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#301\">App\\Services\\GovernanceService::updateProposalVoteCounts<\/a>"],[37.5,5,"<a href=\"GovernanceService.php.html#319\">App\\Services\\GovernanceService::validateProposalCreationPermission<\/a>"],[0,6,"<a href=\"GovernanceService.php.html#342\">App\\Services\\GovernanceService::validateVotingPermission<\/a>"],[100,3,"<a href=\"GovernanceService.php.html#372\">App\\Services\\GovernanceService::isUsingWhaleAvatar<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#380\">App\\Services\\GovernanceService::getActiveProposals<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#389\">App\\Services\\GovernanceService::getProposalHistory<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#398\">App\\Services\\GovernanceService::getUserVotingHistory<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#407\">App\\Services\\GovernanceService::getGovernanceStats<\/a>"],[0,5,"<a href=\"GovernanceService.php.html#426\">App\\Services\\GovernanceService::calculateAverageVotingParticipation<\/a>"],[0,3,"<a href=\"GovernanceService.php.html#446\">App\\Services\\GovernanceService::getVotingPowerDistribution<\/a>"],[75,2,"<a href=\"GovernanceService.php.html#485\">App\\Services\\GovernanceService::canUserCreateProposal<\/a>"],[0,2,"<a href=\"GovernanceService.php.html#495\">App\\Services\\GovernanceService::canUserVoteOnProposal<\/a>"],[100,1,"<a href=\"GovernanceService.php.html#505\">App\\Services\\GovernanceService::calculateVotingCost<\/a>"],[0,1,"<a href=\"GovernanceService.php.html#510\">App\\Services\\GovernanceService::getMaxVoteStrengthForUser<\/a>"],[0,1,"<a href=\"PointsService.php.html#40\">App\\Services\\PointsService::getUserBalance<\/a>"],[100,4,"<a href=\"PointsService.php.html#45\">App\\Services\\PointsService::getUserStats<\/a>"],[0,3,"<a href=\"PointsService.php.html#87\">App\\Services\\PointsService::getTransactionHistory<\/a>"],[91.83673469387756,6,"<a href=\"PointsService.php.html#118\">App\\Services\\PointsService::addPoints<\/a>"],[94.5945945945946,6,"<a href=\"PointsService.php.html#185\">App\\Services\\PointsService::subtractPoints<\/a>"],[100,1,"<a href=\"PointsService.php.html#238\">App\\Services\\PointsService::deductPoints<\/a>"],[92.3076923076923,3,"<a href=\"PointsService.php.html#243\">App\\Services\\PointsService::transferPoints<\/a>"],[0,2,"<a href=\"PointsService.php.html#280\">App\\Services\\PointsService::burnPoints<\/a>"],[0,1,"<a href=\"PointsService.php.html#310\">App\\Services\\PointsService::getSystemStats<\/a>"],[0,1,"<a href=\"PointsService.php.html#350\">App\\Services\\PointsService::getPublicPoolBalance<\/a>"],[0,2,"<a href=\"PointsService.php.html#358\">App\\Services\\PointsService::addToPublicPool<\/a>"],[0,2,"<a href=\"PointsService.php.html#387\">App\\Services\\PointsService::subtractFromPublicPool<\/a>"],[0,1,"<a href=\"PointsService.php.html#418\">App\\Services\\PointsService::getDailyStats<\/a>"],[100,1,"<a href=\"PointsService.php.html#436\">App\\Services\\PointsService::logPointsOperation<\/a>"],[0,1,"<a href=\"PointsService.php.html#452\">App\\Services\\PointsService::getTransactionTypes<\/a>"],[0,4,"<a href=\"PointsService.php.html#457\">App\\Services\\PointsService::validateAmount<\/a>"],[0,1,"<a href=\"PointsService.php.html#474\">App\\Services\\PointsService::formatAmount<\/a>"],[0,2,"<a href=\"PointsService.php.html#479\">App\\Services\\PointsService::getRecentActivity<\/a>"],[100,1,"<a href=\"PointsService.php.html#502\">App\\Services\\PointsService::getPublicPoolStats<\/a>"],[100,1,"<a href=\"PointsService.php.html#514\">App\\Services\\PointsService::getTransparencyDashboard<\/a>"],[100,1,"<a href=\"PointsService.php.html#535\">App\\Services\\PointsService::getLeaderboard<\/a>"],[100,1,"<a href=\"SmsService.php.html#19\">App\\Services\\SmsService::__construct<\/a>"],[100,4,"<a href=\"SmsService.php.html#30\">App\\Services\\SmsService::validateConfig<\/a>"],[0,3,"<a href=\"SmsService.php.html#37\">App\\Services\\SmsService::sendVerificationCode<\/a>"],[0,4,"<a href=\"SmsService.php.html#88\">App\\Services\\SmsService::verifyCode<\/a>"],[0,3,"<a href=\"SmsService.php.html#142\">App\\Services\\SmsService::sendWelcomeMessage<\/a>"],[0,4,"<a href=\"SmsService.php.html#177\">App\\Services\\SmsService::sendNotification<\/a>"],[0,2,"<a href=\"SmsService.php.html#213\">App\\Services\\SmsService::sendSms<\/a>"],[0,1,"<a href=\"SmsService.php.html#240\">App\\Services\\SmsService::generateVerificationCode<\/a>"],[0,1,"<a href=\"SmsService.php.html#245\">App\\Services\\SmsService::storeVerificationCode<\/a>"],[0,3,"<a href=\"SmsService.php.html#259\">App\\Services\\SmsService::checkSendLimit<\/a>"],[0,3,"<a href=\"SmsService.php.html#282\">App\\Services\\SmsService::recordVerificationAttempt<\/a>"],[0,2,"<a href=\"SmsService.php.html#311\">App\\Services\\SmsService::maskPhone<\/a>"],[0,2,"<a href=\"SmsService.php.html#320\">App\\Services\\SmsService::validatePhoneFormat<\/a>"],[0,1,"<a href=\"SmsService.php.html#336\">App\\Services\\SmsService::isPhoneLocked<\/a>"],[0,1,"<a href=\"SmsService.php.html#342\">App\\Services\\SmsService::getRemainingAttempts<\/a>"],[0,4,"<a href=\"SmsService.php.html#349\">App\\Services\\SmsService::canSendSms<\/a>"],[0,2,"<a href=\"SmsService.php.html#384\">App\\Services\\SmsService::getVerificationStatus<\/a>"],[0,4,"<a href=\"SmsService.php.html#406\">App\\Services\\SmsService::bindPhoneToUser<\/a>"],[0,1,"<a href=\"SmsService.php.html#458\">App\\Services\\SmsService::getSmsStats<\/a>"],[0,4,"<a href=\"SmsService.php.html#472\">App\\Services\\SmsService::sendBatchSms<\/a>"],[100,1,"<a href=\"TaskCenterService.php.html#13\">App\\Services\\TaskCenterService::__construct<\/a>"],[0,2,"<a href=\"TaskCenterService.php.html#19\">App\\Services\\TaskCenterService::getUserTasks<\/a>"],[0,8,"<a href=\"TaskCenterService.php.html#40\">App\\Services\\TaskCenterService::getDailyTasks<\/a>"],[0,3,"<a href=\"TaskCenterService.php.html#98\">App\\Services\\TaskCenterService::getOnetimeTasks<\/a>"],[0,6,"<a href=\"TaskCenterService.php.html#157\">App\\Services\\TaskCenterService::getOngoingTasks<\/a>"],[0,4,"<a href=\"TaskCenterService.php.html#266\">App\\Services\\TaskCenterService::getWhaleTasks<\/a>"],[0,8,"<a href=\"TaskCenterService.php.html#320\">App\\Services\\TaskCenterService::checkProfileCompletion<\/a>"],[0,1,"<a href=\"TaskCenterService.php.html#344\">App\\Services\\TaskCenterService::getFieldDisplayName<\/a>"],[0,3,"<a href=\"TaskCenterService.php.html#356\">App\\Services\\TaskCenterService::getNextMilestone<\/a>"],[0,1,"<a href=\"TaskCenterService.php.html#366\">App\\Services\\TaskCenterService::calculateMilestoneReward<\/a>"],[0,3,"<a href=\"TaskCenterService.php.html#372\">App\\Services\\TaskCenterService::isUsingWhaleAvatar<\/a>"],[0,3,"<a href=\"TaskCenterService.php.html#380\">App\\Services\\TaskCenterService::sortTasks<\/a>"],[0,6,"<a href=\"TaskCenterService.php.html#402\">App\\Services\\TaskCenterService::getTaskStats<\/a>"],[0,1,"<a href=\"TaskCenterService.php.html#434\">App\\Services\\TaskCenterService::getTaskCategories<\/a>"],[0,1,"<a href=\"TaskCenterService.php.html#446\">App\\Services\\TaskCenterService::getTaskDifficulties<\/a>"],[100,1,"<a href=\"TencentCloudService.php.html#17\">App\\Services\\TencentCloudService::__construct<\/a>"],[40,3,"<a href=\"TencentCloudService.php.html#26\">App\\Services\\TencentCloudService::initializeCosClient<\/a>"],[0,3,"<a href=\"TencentCloudService.php.html#45\">App\\Services\\TencentCloudService::uploadFile<\/a>"],[0,3,"<a href=\"TencentCloudService.php.html#93\">App\\Services\\TencentCloudService::uploadArtwork<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#109\">App\\Services\\TencentCloudService::uploadAvatar<\/a>"],[0,3,"<a href=\"TencentCloudService.php.html#125\">App\\Services\\TencentCloudService::uploadWhaleAvatar<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#184\">App\\Services\\TencentCloudService::performUpload<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#194\">App\\Services\\TencentCloudService::performDirectUpload<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#216\">App\\Services\\TencentCloudService::deleteFile<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#240\">App\\Services\\TencentCloudService::getFileUrl<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#249\">App\\Services\\TencentCloudService::generateThumbnail<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#275\">App\\Services\\TencentCloudService::listFiles<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#296\">App\\Services\\TencentCloudService::getFileInfo<\/a>"],[0,4,"<a href=\"TencentCloudService.php.html#320\">App\\Services\\TencentCloudService::validateFile<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#344\">App\\Services\\TencentCloudService::generateFilename<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#353\">App\\Services\\TencentCloudService::isImageFile<\/a>"],[0,3,"<a href=\"TencentCloudService.php.html#361\">App\\Services\\TencentCloudService::getImageProcessOptions<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#377\">App\\Services\\TencentCloudService::getUploadToken<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#397\">App\\Services\\TencentCloudService::getDownloadUrl<\/a>"],[0,2,"<a href=\"TencentCloudService.php.html#405\">App\\Services\\TencentCloudService::getBatchUploadTokens<\/a>"],[0,1,"<a href=\"TencentCloudService.php.html#416\">App\\Services\\TencentCloudService::getStorageStats<\/a>"],[0,1,"<a href=\"TransparencyService.php.html#38\">App\\Services\\TransparencyService::getPublicStats<\/a>"],[0,4,"<a href=\"TransparencyService.php.html#74\">App\\Services\\TransparencyService::getRecentEvents<\/a>"],[0,2,"<a href=\"TransparencyService.php.html#103\">App\\Services\\TransparencyService::formatEventForPublic<\/a>"],[0,2,"<a href=\"TransparencyService.php.html#122\">App\\Services\\TransparencyService::maskUserName<\/a>"],[0,7,"<a href=\"TransparencyService.php.html#135\">App\\Services\\TransparencyService::sanitizeEventData<\/a>"],[0,1,"<a href=\"TransparencyService.php.html#160\">App\\Services\\TransparencyService::getPointsFlowAnalysis<\/a>"],[0,1,"<a href=\"TransparencyService.php.html#216\">App\\Services\\TransparencyService::getGovernanceActivity<\/a>"],[0,2,"<a href=\"TransparencyService.php.html#256\">App\\Services\\TransparencyService::getMarketplaceActivity<\/a>"],[0,2,"<a href=\"TransparencyService.php.html#304\">App\\Services\\TransparencyService::getWhaleActivity<\/a>"],[0,1,"<a href=\"TransparencyService.php.html#347\">App\\Services\\TransparencyService::getPublicPoolBalance<\/a>"],[0,3,"<a href=\"TransparencyService.php.html#355\">App\\Services\\TransparencyService::search<\/a>"],[0,1,"<a href=\"TransparencyService.php.html#384\">App\\Services\\TransparencyService::getEventTypes<\/a>"],[0,2,"<a href=\"TransparencyService.php.html#389\">App\\Services\\TransparencyService::exportTransparencyData<\/a>"],[0,3,"<a href=\"TransparencyService.php.html#424\">App\\Services\\TransparencyService::convertToCsv<\/a>"],[100,1,"<a href=\"UserService.php.html#15\">App\\Services\\UserService::__construct<\/a>"],[0,1,"<a href=\"UserService.php.html#20\">App\\Services\\UserService::createUser<\/a>"],[0,9,"<a href=\"UserService.php.html#51\">App\\Services\\UserService::updateProfile<\/a>"],[0,2,"<a href=\"UserService.php.html#88\">App\\Services\\UserService::changePassword<\/a>"],[0,6,"<a href=\"UserService.php.html#108\">App\\Services\\UserService::updateSettings<\/a>"],[0,1,"<a href=\"UserService.php.html#149\">App\\Services\\UserService::generateHohoId<\/a>"],[0,2,"<a href=\"UserService.php.html#158\">App\\Services\\UserService::getUserStats<\/a>"],[0,2,"<a href=\"UserService.php.html#208\">App\\Services\\UserService::getUserRanking<\/a>"],[0,1,"<a href=\"UserService.php.html#237\">App\\Services\\UserService::getActivityHistory<\/a>"],[0,6,"<a href=\"UserService.php.html#272\">App\\Services\\UserService::getUserAchievements<\/a>"],[0,1,"<a href=\"UserService.php.html#331\">App\\Services\\UserService::deactivateUser<\/a>"],[0,1,"<a href=\"UserService.php.html#348\">App\\Services\\UserService::reactivateUser<\/a>"],[0,1,"<a href=\"UserService.php.html#365\">App\\Services\\UserService::searchUsers<\/a>"],[0,5,"<a href=\"UserService.php.html#377\">App\\Services\\UserService::getLeaderboard<\/a>"],[0,3,"<a href=\"UserService.php.html#442\">App\\Services\\UserService::getUserProfile<\/a>"],[100,1,"<a href=\"WhaleMarketDataService.php.html#15\">App\\Services\\WhaleMarketDataService::__construct<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#22\">App\\Services\\WhaleMarketDataService::getFloorPrice<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#47\">App\\Services\\WhaleMarketDataService::getMarketCap<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#72\">App\\Services\\WhaleMarketDataService::getTradingVolume24h<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#98\">App\\Services\\WhaleMarketDataService::getHolderCount<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#123\">App\\Services\\WhaleMarketDataService::getCollectionStats<\/a>"],[0,6,"<a href=\"WhaleMarketDataService.php.html#160\">App\\Services\\WhaleMarketDataService::getBatchCollectionStats<\/a>"],[0,6,"<a href=\"WhaleMarketDataService.php.html#193\">App\\Services\\WhaleMarketDataService::makeMarketApiRequest<\/a>"],[0,1,"<a href=\"WhaleMarketDataService.php.html#219\">App\\Services\\WhaleMarketDataService::getEstimatedFloorPrice<\/a>"],[0,1,"<a href=\"WhaleMarketDataService.php.html#234\">App\\Services\\WhaleMarketDataService::getEstimatedStats<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#254\">App\\Services\\WhaleMarketDataService::refreshAllMarketData<\/a>"],[0,2,"<a href=\"WhaleMarketDataService.php.html#300\">App\\Services\\WhaleMarketDataService::getMarketTrends<\/a>"],[0,3,"<a href=\"WhaleMarketDataService.php.html#325\">App\\Services\\WhaleMarketDataService::clearMarketDataCache<\/a>"],[100,1,"<a href=\"WhalePricingService.php.html#15\">App\\Services\\WhalePricingService::__construct<\/a>"],[100,1,"<a href=\"WhalePricingService.php.html#21\">App\\Services\\WhalePricingService::loadPricingConfig<\/a>"],[0,3,"<a href=\"WhalePricingService.php.html#61\">App\\Services\\WhalePricingService::calculateNftValue<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#115\">App\\Services\\WhalePricingService::gatherCollectionMetrics<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#133\">App\\Services\\WhalePricingService::calculateBaseValue<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#143\">App\\Services\\WhalePricingService::getRarityMultiplier<\/a>"],[0,2,"<a href=\"WhalePricingService.php.html#148\">App\\Services\\WhalePricingService::calculateTimeDecayFactor<\/a>"],[0,3,"<a href=\"WhalePricingService.php.html#164\">App\\Services\\WhalePricingService::calculateMarketMultiplier<\/a>"],[0,6,"<a href=\"WhalePricingService.php.html#179\">App\\Services\\WhalePricingService::applyVolatilityProtection<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#224\">App\\Services\\WhalePricingService::isHohoCollection<\/a>"],[0,5,"<a href=\"WhalePricingService.php.html#229\">App\\Services\\WhalePricingService::determineRarity<\/a>"],[0,3,"<a href=\"WhalePricingService.php.html#241\">App\\Services\\WhalePricingService::parsePrice<\/a>"],[0,2,"<a href=\"WhalePricingService.php.html#251\">App\\Services\\WhalePricingService::parseDate<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#260\">App\\Services\\WhalePricingService::logPricingCalculation<\/a>"],[0,2,"<a href=\"WhalePricingService.php.html#269\">App\\Services\\WhalePricingService::updatePricingConfig<\/a>"],[0,7,"<a href=\"WhalePricingService.php.html#295\">App\\Services\\WhalePricingService::validatePricingConfig<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#314\">App\\Services\\WhalePricingService::getPricingConfig<\/a>"],[0,1,"<a href=\"WhalePricingService.php.html#319\">App\\Services\\WhalePricingService::getCollectionPriceHistory<\/a>"],[0,4,"<a href=\"WhalePricingService.php.html#327\">App\\Services\\WhalePricingService::calculateBatchRewards<\/a>"],[100,1,"<a href=\"WhaleRewardService.php.html#17\">App\\Services\\WhaleRewardService::__construct<\/a>"],[100,1,"<a href=\"WhaleRewardService.php.html#23\">App\\Services\\WhaleRewardService::loadRewardConfig<\/a>"],[0,3,"<a href=\"WhaleRewardService.php.html#58\">App\\Services\\WhaleRewardService::calculateBindingReward<\/a>"],[0,4,"<a href=\"WhaleRewardService.php.html#83\">App\\Services\\WhaleRewardService::calculateDailyCheckinReward<\/a>"],[0,9,"<a href=\"WhaleRewardService.php.html#98\">App\\Services\\WhaleRewardService::calculateNftAirdropReward<\/a>"],[0,2,"<a href=\"WhaleRewardService.php.html#151\">App\\Services\\WhaleRewardService::processArtworkInteractionReward<\/a>"],[0,3,"<a href=\"WhaleRewardService.php.html#173\">App\\Services\\WhaleRewardService::processDailyCheckin<\/a>"],[0,5,"<a href=\"WhaleRewardService.php.html#205\">App\\Services\\WhaleRewardService::processBatchNftAirdrop<\/a>"],[0,4,"<a href=\"WhaleRewardService.php.html#261\">App\\Services\\WhaleRewardService::syncAndRewardUser<\/a>"],[0,5,"<a href=\"WhaleRewardService.php.html#289\">App\\Services\\WhaleRewardService::determineCollectionRarity<\/a>"],[0,4,"<a href=\"WhaleRewardService.php.html#301\">App\\Services\\WhaleRewardService::isUsingWhaleAvatar<\/a>"],[0,1,"<a href=\"WhaleRewardService.php.html#311\">App\\Services\\WhaleRewardService::logAirdropReward<\/a>"],[0,1,"<a href=\"WhaleRewardService.php.html#325\">App\\Services\\WhaleRewardService::getRewardHistory<\/a>"],[100,1,"<a href=\"WhaleRewardService.php.html#342\">App\\Services\\WhaleRewardService::getUserRewardStats<\/a>"],[0,1,"<a href=\"WhaleRewardService.php.html#366\">App\\Services\\WhaleRewardService::updateRewardConfig<\/a>"],[0,1,"<a href=\"WhaleRewardService.php.html#381\">App\\Services\\WhaleRewardService::getRewardConfig<\/a>"],[100,1,"<a href=\"WhaleService.php.html#21\">App\\Services\\WhaleService::__construct<\/a>"],[0,2,"<a href=\"WhaleService.php.html#30\">App\\Services\\WhaleService::getAuthUrl<\/a>"],[0,4,"<a href=\"WhaleService.php.html#45\">App\\Services\\WhaleService::exchangeCodeForToken<\/a>"],[0,4,"<a href=\"WhaleService.php.html#84\">App\\Services\\WhaleService::getUserInfo<\/a>"],[0,4,"<a href=\"WhaleService.php.html#113\">App\\Services\\WhaleService::getUserCollections<\/a>"],[0,3,"<a href=\"WhaleService.php.html#151\">App\\Services\\WhaleService::bindUserAccount<\/a>"],[0,2,"<a href=\"WhaleService.php.html#203\">App\\Services\\WhaleService::syncUserCollections<\/a>"],[0,1,"<a href=\"WhaleService.php.html#240\">App\\Services\\WhaleService::calculateNftValue<\/a>"],[0,5,"<a href=\"WhaleService.php.html#246\">App\\Services\\WhaleService::determineRarity<\/a>"],[0,1,"<a href=\"WhaleService.php.html#258\">App\\Services\\WhaleService::calculateBindingReward<\/a>"],[0,4,"<a href=\"WhaleService.php.html#264\">App\\Services\\WhaleService::refreshUserData<\/a>"],[0,3,"<a href=\"WhaleService.php.html#296\">App\\Services\\WhaleService::syncAllAccounts<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

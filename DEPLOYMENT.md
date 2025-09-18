@@ -14,7 +14,7 @@
 
 ### 软件要求
 - 操作系统: Ubuntu 20.04 LTS 或 CentOS 8+
-- PHP: 8.2或更高版本
+- PHP: 8.4或更高版本
 - MySQL: 8.0或更高版本
 - Nginx: 1.18或更高版本
 - Redis: 6.0或更高版本
@@ -53,10 +53,10 @@ sudo apt install -y curl wget git unzip software-properties-common
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
 
-# 安装PHP 8.2
-sudo apt install -y php8.2 php8.2-fpm php8.2-mysql php8.2-xml php8.2-gd \
-    php8.2-curl php8.2-mbstring php8.2-zip php8.2-bcmath php8.2-json \
-    php8.2-tokenizer php8.2-ctype php8.2-openssl php8.2-redis
+# 安装PHP 8.4
+sudo apt install -y php8.4 php8.4-fpm php8.4-mysql php8.4-xml php8.4-gd \
+    php8.4-curl php8.4-mbstring php8.4-zip php8.4-bcmath php8.4-json \
+    php8.4-tokenizer php8.4-ctype php8.4-openssl php8.4-redis
 
 # 安装Nginx
 sudo apt install -y nginx
@@ -232,7 +232,7 @@ TENCENT_SMS_SDK_APP_ID=your-sdk-app-id
 
 ### PHP-FPM配置
 
-优化的PHP-FPM池配置，位于：`/etc/php/8.2/fpm/pool.d/hoho.conf`
+优化的PHP-FPM池配置，位于：`/etc/php/8.4/fpm/pool.d/hoho.conf`
 
 关键配置：
 - 内存限制：256M
@@ -260,7 +260,7 @@ htop
 sudo systemctl status nginx
 
 # 查看PHP-FPM状态
-sudo systemctl status php8.2-fpm
+sudo systemctl status php8.4-fpm
 
 # 查看MySQL状态
 sudo systemctl status mysql
@@ -309,7 +309,7 @@ sudo -u www-data php artisan migrate --force
 sudo -u www-data php artisan config:cache
 sudo -u www-data php artisan route:cache
 sudo -u www-data php artisan view:cache
-sudo systemctl reload php8.2-fpm
+sudo systemctl reload php8.4-fpm
 sudo systemctl reload nginx
 ```
 
@@ -349,7 +349,7 @@ tail -f /var/log/hoho/php-fpm-error.log
 
 # 查看系统日志
 journalctl -f -u nginx
-journalctl -f -u php8.2-fpm
+journalctl -f -u php8.4-fpm
 ```
 
 ## 性能优化
@@ -381,7 +381,7 @@ save 60 10000
 
 ```bash
 # 启用OPcache
-sudo nano /etc/php/8.2/fpm/php.ini
+sudo nano /etc/php/8.4/fpm/php.ini
 
 # 添加或修改以下配置：
 opcache.enable=1

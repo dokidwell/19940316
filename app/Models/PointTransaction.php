@@ -12,17 +12,21 @@ class PointTransaction extends Model
     protected $fillable = [
         'user_id',
         'type',
+        'category',
         'amount',
+        'balance_before',
         'balance_after',
         'description',
-        'related_type',
-        'related_id',
         'metadata',
+        'reference_type',
+        'reference_id',
+        'admin_id',
     ];
 
     protected $casts = [
-        'amount' => 'decimal:8',
-        'balance_after' => 'decimal:8',
+        'amount' => 'decimal:6',
+        'balance_before' => 'decimal:6',
+        'balance_after' => 'decimal:6',
         'metadata' => 'array',
     ];
 

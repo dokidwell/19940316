@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/yadangzhouji/Desktop/hoho-new/app/Models</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=10.1.16" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/Users/yadangzhouji/Desktop/hoho-new/app</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Models</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Artwork.php.html#8">App\Models\Artwork</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#8">App\Models\Banner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#8">App\Models\NftCollection</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#8">App\Models\Proposal</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#8">App\Models\ProposalVote</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#8">App\Models\WhaleAccount</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#8">App\Models\PointTransaction</a></td><td class="text-right">8%</td></tr>
+       <tr><td><a href="User.php.html#11">App\Models\User</a></td><td class="text-right">11%</td></tr>
+       <tr><td><a href="SystemLog.php.html#8">App\Models\SystemLog</a></td><td class="text-right">18%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Proposal.php.html#8">App\Models\Proposal</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="User.php.html#11">App\Models\User</a></td><td class="text-right">269</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#8">App\Models\WhaleAccount</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="SystemLog.php.html#8">App\Models\SystemLog</a></td><td class="text-right">175</td></tr>
+       <tr><td><a href="Banner.php.html#8">App\Models\Banner</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="NftCollection.php.html#8">App\Models\NftCollection</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Artwork.php.html#8">App\Models\Artwork</a></td><td class="text-right">90</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Artwork.php.html#46"><abbr title="App\Models\Artwork::creator">creator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#51"><abbr title="App\Models\Artwork::pointTransactions">pointTransactions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#56"><abbr title="App\Models\Artwork::incrementView">incrementView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#72"><abbr title="App\Models\Artwork::incrementLike">incrementLike</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#88"><abbr title="App\Models\Artwork::incrementDownload">incrementDownload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#104"><abbr title="App\Models\Artwork::handlePurchase">handlePurchase</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#139"><abbr title="App\Models\Artwork::getFileUrlAttribute">getFileUrlAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Artwork.php.html#144"><abbr title="App\Models\Artwork::getThumbnailUrlAttribute">getThumbnailUrlAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#46"><abbr title="App\Models\Banner::scopeActive">scopeActive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#59"><abbr title="App\Models\Banner::scopeByPosition">scopeByPosition</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#64"><abbr title="App\Models\Banner::scopeOrdered">scopeOrdered</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#69"><abbr title="App\Models\Banner::incrementClick">incrementClick</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#84"><abbr title="App\Models\Banner::isExpired">isExpired</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#89"><abbr title="App\Models\Banner::isScheduled">isScheduled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Banner.php.html#94"><abbr title="App\Models\Banner::getImageUrlAttribute">getImageUrlAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#49"><abbr title="App\Models\NftCollection::user">user</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#54"><abbr title="App\Models\NftCollection::whaleAccount">whaleAccount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#59"><abbr title="App\Models\NftCollection::getRarityDisplayAttribute">getRarityDisplayAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#64"><abbr title="App\Models\NftCollection::getRarityMultiplierAttribute">getRarityMultiplierAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#69"><abbr title="App\Models\NftCollection::getRewardBonusAttribute">getRewardBonusAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#74"><abbr title="App\Models\NftCollection::isHighValue">isHighValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#79"><abbr title="App\Models\NftCollection::isRare">isRare</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#84"><abbr title="App\Models\NftCollection::getTotalValueForUser">getTotalValueForUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="NftCollection.php.html#89"><abbr title="App\Models\NftCollection::getCountByRarity">getCountByRarity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#57"><abbr title="App\Models\PointTransaction::related">related</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#62"><abbr title="App\Models\PointTransaction::getTypeDisplayAttribute">getTypeDisplayAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#67"><abbr title="App\Models\PointTransaction::getIsIncomeAttribute">getIsIncomeAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#72"><abbr title="App\Models\PointTransaction::getIsExpenseAttribute">getIsExpenseAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#77"><abbr title="App\Models\PointTransaction::getTotalVolume">getTotalVolume</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#82"><abbr title="App\Models\PointTransaction::getTotalIncome">getTotalIncome</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#87"><abbr title="App\Models\PointTransaction::getTotalExpense">getTotalExpense</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PointTransaction.php.html#92"><abbr title="App\Models\PointTransaction::getRecentActivity">getRecentActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#65"><abbr title="App\Models\Proposal::creator">creator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#70"><abbr title="App\Models\Proposal::votes">votes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#75"><abbr title="App\Models\Proposal::pointTransactions">pointTransactions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#80"><abbr title="App\Models\Proposal::isActive">isActive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#87"><abbr title="App\Models\Proposal::hasEnded">hasEnded</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#92"><abbr title="App\Models\Proposal::canVote">canVote</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#99"><abbr title="App\Models\Proposal::vote">vote</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#130"><abbr title="App\Models\Proposal::updateVoteCounts">updateVoteCounts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#143"><abbr title="App\Models\Proposal::finalizeVoting">finalizeVoting</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#175"><abbr title="App\Models\Proposal::getCategoryDisplayAttribute">getCategoryDisplayAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#180"><abbr title="App\Models\Proposal::getTotalVotesAttribute">getTotalVotesAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Proposal.php.html#185"><abbr title="App\Models\Proposal::getTotalPointsSpentAttribute">getTotalPointsSpentAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#36"><abbr title="App\Models\ProposalVote::proposal">proposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#41"><abbr title="App\Models\ProposalVote::user">user</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#46"><abbr title="App\Models\ProposalVote::pointTransactions">pointTransactions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#51"><abbr title="App\Models\ProposalVote::getPositionDisplayAttribute">getPositionDisplayAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#56"><abbr title="App\Models\ProposalVote::getEffectiveVotingPowerAttribute">getEffectiveVotingPowerAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ProposalVote.php.html#61"><abbr title="App\Models\ProposalVote::calculateQuadraticCost">calculateQuadraticCost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#65"><abbr title="App\Models\SystemLog::user">user</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#70"><abbr title="App\Models\SystemLog::scopeByType">scopeByType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#75"><abbr title="App\Models\SystemLog::scopeByLevel">scopeByLevel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#80"><abbr title="App\Models\SystemLog::scopeRecent">scopeRecent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#85"><abbr title="App\Models\SystemLog::scopeForTransparency">scopeForTransparency</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#99"><abbr title="App\Models\SystemLog::getTypeDisplayAttribute">getTypeDisplayAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#104"><abbr title="App\Models\SystemLog::getFormattedDataAttribute">getFormattedDataAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#134"><abbr title="App\Models\SystemLog::getSystemStats">getSystemStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#151"><abbr title="App\Models\SystemLog::calculatePublicPoolBalance">calculatePublicPoolBalance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#158"><abbr title="App\Models\SystemLog::calculateBurnedPoints">calculateBurnedPoints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SystemLog.php.html#164"><abbr title="App\Models\SystemLog::getRecentActivity">getRecentActivity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#15"><abbr title="App\Models\User::artworks">artworks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#25"><abbr title="App\Models\User::proposals">proposals</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#30"><abbr title="App\Models\User::votes">votes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#40"><abbr title="App\Models\User::nftCollections">nftCollections</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#45"><abbr title="App\Models\User::addPoints">addPoints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#62"><abbr title="App\Models\User::subtractPoints">subtractPoints</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#92"><abbr title="App\Models\User::canCreateProposal">canCreateProposal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#97"><abbr title="App\Models\User::getVotingPower">getVotingPower</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#36"><abbr title="App\Models\WhaleAccount::users">users</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#41"><abbr title="App\Models\WhaleAccount::nftCollections">nftCollections</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#46"><abbr title="App\Models\WhaleAccount::isVerified">isVerified</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#51"><abbr title="App\Models\WhaleAccount::needsSync">needsSync</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#56"><abbr title="App\Models\WhaleAccount::calculateRewardMultiplier">calculateRewardMultiplier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#65"><abbr title="App\Models\WhaleAccount::updateFromWhaleApi">updateFromWhaleApi</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#96"><abbr title="App\Models\WhaleAccount::syncNftCollections">syncNftCollections</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#112"><abbr title="App\Models\WhaleAccount::getDisplayNameAttribute">getDisplayNameAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#117"><abbr title="App\Models\WhaleAccount::getTotalRewardMultiplierAttribute">getTotalRewardMultiplierAttribute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="User.php.html#83"><abbr title="App\Models\User::getWhaleRewardMultiplier">getWhaleRewardMultiplier</abbr></a></td><td class="text-right">66%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="SystemLog.php.html#104"><abbr title="App\Models\SystemLog::getFormattedDataAttribute">getFormattedDataAttribute</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Proposal.php.html#143"><abbr title="App\Models\Proposal::finalizeVoting">finalizeVoting</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="User.php.html#62"><abbr title="App\Models\User::subtractPoints">subtractPoints</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Banner.php.html#94"><abbr title="App\Models\Banner::getImageUrlAttribute">getImageUrlAttribute</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Proposal.php.html#80"><abbr title="App\Models\Proposal::isActive">isActive</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Proposal.php.html#92"><abbr title="App\Models\Proposal::canVote">canVote</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Proposal.php.html#99"><abbr title="App\Models\Proposal::vote">vote</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="User.php.html#45"><abbr title="App\Models\User::addPoints">addPoints</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#56"><abbr title="App\Models\WhaleAccount::calculateRewardMultiplier">calculateRewardMultiplier</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Artwork.php.html#144"><abbr title="App\Models\Artwork::getThumbnailUrlAttribute">getThumbnailUrlAttribute</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Banner.php.html#84"><abbr title="App\Models\Banner::isExpired">isExpired</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Banner.php.html#89"><abbr title="App\Models\Banner::isScheduled">isScheduled</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="NftCollection.php.html#89"><abbr title="App\Models\NftCollection::getCountByRarity">getCountByRarity</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="User.php.html#92"><abbr title="App\Models\User::canCreateProposal">canCreateProposal</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#51"><abbr title="App\Models\WhaleAccount::needsSync">needsSync</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#96"><abbr title="App\Models\WhaleAccount::syncNftCollections">syncNftCollections</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="WhaleAccount.php.html#112"><abbr title="App\Models\WhaleAccount::getDisplayNameAttribute">getDisplayNameAttribute</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="User.php.html#83"><abbr title="App\Models\User::getWhaleRewardMultiplier">getWhaleRewardMultiplier</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 10.1.16</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.12</a> and <a href="https://phpunit.de/">PHPUnit 10.5.55</a> at Wed Sep 17 23:08:40 UTC 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js?v=10.1.16" type="text/javascript"></script>
+  <script src="../_js/d3.min.js?v=10.1.16" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js?v=10.1.16" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([6,1,2,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([78,0,0,0,0,0,0,1,0,0,0,4], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,9,"<a href=\"Artwork.php.html#8\">App\\Models\\Artwork<\/a>"],[0,11,"<a href=\"Banner.php.html#8\">App\\Models\\Banner<\/a>"],[0,10,"<a href=\"NftCollection.php.html#8\">App\\Models\\NftCollection<\/a>"],[8.333333333333332,9,"<a href=\"PointTransaction.php.html#8\">App\\Models\\PointTransaction<\/a>"],[0,21,"<a href=\"Proposal.php.html#8\">App\\Models\\Proposal<\/a>"],[0,6,"<a href=\"ProposalVote.php.html#8\">App\\Models\\ProposalVote<\/a>"],[18.181818181818183,17,"<a href=\"SystemLog.php.html#8\">App\\Models\\SystemLog<\/a>"],[11.428571428571429,19,"<a href=\"User.php.html#11\">App\\Models\\User<\/a>"],[0,14,"<a href=\"WhaleAccount.php.html#8\">App\\Models\\WhaleAccount<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Artwork.php.html#46\">App\\Models\\Artwork::creator<\/a>"],[0,1,"<a href=\"Artwork.php.html#51\">App\\Models\\Artwork::pointTransactions<\/a>"],[0,1,"<a href=\"Artwork.php.html#56\">App\\Models\\Artwork::incrementView<\/a>"],[0,1,"<a href=\"Artwork.php.html#72\">App\\Models\\Artwork::incrementLike<\/a>"],[0,1,"<a href=\"Artwork.php.html#88\">App\\Models\\Artwork::incrementDownload<\/a>"],[0,1,"<a href=\"Artwork.php.html#104\">App\\Models\\Artwork::handlePurchase<\/a>"],[0,1,"<a href=\"Artwork.php.html#139\">App\\Models\\Artwork::getFileUrlAttribute<\/a>"],[0,2,"<a href=\"Artwork.php.html#144\">App\\Models\\Artwork::getThumbnailUrlAttribute<\/a>"],[0,1,"<a href=\"Banner.php.html#46\">App\\Models\\Banner::scopeActive<\/a>"],[0,1,"<a href=\"Banner.php.html#59\">App\\Models\\Banner::scopeByPosition<\/a>"],[0,1,"<a href=\"Banner.php.html#64\">App\\Models\\Banner::scopeOrdered<\/a>"],[0,1,"<a href=\"Banner.php.html#69\">App\\Models\\Banner::incrementClick<\/a>"],[0,2,"<a href=\"Banner.php.html#84\">App\\Models\\Banner::isExpired<\/a>"],[0,2,"<a href=\"Banner.php.html#89\">App\\Models\\Banner::isScheduled<\/a>"],[0,3,"<a href=\"Banner.php.html#94\">App\\Models\\Banner::getImageUrlAttribute<\/a>"],[0,1,"<a href=\"NftCollection.php.html#49\">App\\Models\\NftCollection::user<\/a>"],[0,1,"<a href=\"NftCollection.php.html#54\">App\\Models\\NftCollection::whaleAccount<\/a>"],[0,1,"<a href=\"NftCollection.php.html#59\">App\\Models\\NftCollection::getRarityDisplayAttribute<\/a>"],[0,1,"<a href=\"NftCollection.php.html#64\">App\\Models\\NftCollection::getRarityMultiplierAttribute<\/a>"],[0,1,"<a href=\"NftCollection.php.html#69\">App\\Models\\NftCollection::getRewardBonusAttribute<\/a>"],[0,1,"<a href=\"NftCollection.php.html#74\">App\\Models\\NftCollection::isHighValue<\/a>"],[0,1,"<a href=\"NftCollection.php.html#79\">App\\Models\\NftCollection::isRare<\/a>"],[0,1,"<a href=\"NftCollection.php.html#84\">App\\Models\\NftCollection::getTotalValueForUser<\/a>"],[0,2,"<a href=\"NftCollection.php.html#89\">App\\Models\\NftCollection::getCountByRarity<\/a>"],[100,1,"<a href=\"PointTransaction.php.html#52\">App\\Models\\PointTransaction::user<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#57\">App\\Models\\PointTransaction::related<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#62\">App\\Models\\PointTransaction::getTypeDisplayAttribute<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#67\">App\\Models\\PointTransaction::getIsIncomeAttribute<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#72\">App\\Models\\PointTransaction::getIsExpenseAttribute<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#77\">App\\Models\\PointTransaction::getTotalVolume<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#82\">App\\Models\\PointTransaction::getTotalIncome<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#87\">App\\Models\\PointTransaction::getTotalExpense<\/a>"],[0,1,"<a href=\"PointTransaction.php.html#92\">App\\Models\\PointTransaction::getRecentActivity<\/a>"],[0,1,"<a href=\"Proposal.php.html#65\">App\\Models\\Proposal::creator<\/a>"],[0,1,"<a href=\"Proposal.php.html#70\">App\\Models\\Proposal::votes<\/a>"],[0,1,"<a href=\"Proposal.php.html#75\">App\\Models\\Proposal::pointTransactions<\/a>"],[0,3,"<a href=\"Proposal.php.html#80\">App\\Models\\Proposal::isActive<\/a>"],[0,1,"<a href=\"Proposal.php.html#87\">App\\Models\\Proposal::hasEnded<\/a>"],[0,3,"<a href=\"Proposal.php.html#92\">App\\Models\\Proposal::canVote<\/a>"],[0,3,"<a href=\"Proposal.php.html#99\">App\\Models\\Proposal::vote<\/a>"],[0,1,"<a href=\"Proposal.php.html#130\">App\\Models\\Proposal::updateVoteCounts<\/a>"],[0,4,"<a href=\"Proposal.php.html#143\">App\\Models\\Proposal::finalizeVoting<\/a>"],[0,1,"<a href=\"Proposal.php.html#175\">App\\Models\\Proposal::getCategoryDisplayAttribute<\/a>"],[0,1,"<a href=\"Proposal.php.html#180\">App\\Models\\Proposal::getTotalVotesAttribute<\/a>"],[0,1,"<a href=\"Proposal.php.html#185\">App\\Models\\Proposal::getTotalPointsSpentAttribute<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#36\">App\\Models\\ProposalVote::proposal<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#41\">App\\Models\\ProposalVote::user<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#46\">App\\Models\\ProposalVote::pointTransactions<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#51\">App\\Models\\ProposalVote::getPositionDisplayAttribute<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#56\">App\\Models\\ProposalVote::getEffectiveVotingPowerAttribute<\/a>"],[0,1,"<a href=\"ProposalVote.php.html#61\">App\\Models\\ProposalVote::calculateQuadraticCost<\/a>"],[0,1,"<a href=\"SystemLog.php.html#65\">App\\Models\\SystemLog::user<\/a>"],[0,1,"<a href=\"SystemLog.php.html#70\">App\\Models\\SystemLog::scopeByType<\/a>"],[0,1,"<a href=\"SystemLog.php.html#75\">App\\Models\\SystemLog::scopeByLevel<\/a>"],[0,1,"<a href=\"SystemLog.php.html#80\">App\\Models\\SystemLog::scopeRecent<\/a>"],[0,1,"<a href=\"SystemLog.php.html#85\">App\\Models\\SystemLog::scopeForTransparency<\/a>"],[0,1,"<a href=\"SystemLog.php.html#99\">App\\Models\\SystemLog::getTypeDisplayAttribute<\/a>"],[0,5,"<a href=\"SystemLog.php.html#104\">App\\Models\\SystemLog::getFormattedDataAttribute<\/a>"],[100,2,"<a href=\"SystemLog.php.html#120\">App\\Models\\SystemLog::logUserAction<\/a>"],[0,1,"<a href=\"SystemLog.php.html#134\">App\\Models\\SystemLog::getSystemStats<\/a>"],[0,1,"<a href=\"SystemLog.php.html#151\">App\\Models\\SystemLog::calculatePublicPoolBalance<\/a>"],[0,1,"<a href=\"SystemLog.php.html#158\">App\\Models\\SystemLog::calculateBurnedPoints<\/a>"],[0,1,"<a href=\"SystemLog.php.html#164\">App\\Models\\SystemLog::getRecentActivity<\/a>"],[0,1,"<a href=\"User.php.html#15\">App\\Models\\User::artworks<\/a>"],[100,1,"<a href=\"User.php.html#20\">App\\Models\\User::pointTransactions<\/a>"],[0,1,"<a href=\"User.php.html#25\">App\\Models\\User::proposals<\/a>"],[0,1,"<a href=\"User.php.html#30\">App\\Models\\User::votes<\/a>"],[100,1,"<a href=\"User.php.html#35\">App\\Models\\User::whaleAccount<\/a>"],[0,1,"<a href=\"User.php.html#40\">App\\Models\\User::nftCollections<\/a>"],[0,3,"<a href=\"User.php.html#45\">App\\Models\\User::addPoints<\/a>"],[0,4,"<a href=\"User.php.html#62\">App\\Models\\User::subtractPoints<\/a>"],[66.66666666666666,3,"<a href=\"User.php.html#83\">App\\Models\\User::getWhaleRewardMultiplier<\/a>"],[0,2,"<a href=\"User.php.html#92\">App\\Models\\User::canCreateProposal<\/a>"],[0,1,"<a href=\"User.php.html#97\">App\\Models\\User::getVotingPower<\/a>"],[0,1,"<a href=\"WhaleAccount.php.html#36\">App\\Models\\WhaleAccount::users<\/a>"],[0,1,"<a href=\"WhaleAccount.php.html#41\">App\\Models\\WhaleAccount::nftCollections<\/a>"],[0,1,"<a href=\"WhaleAccount.php.html#46\">App\\Models\\WhaleAccount::isVerified<\/a>"],[0,2,"<a href=\"WhaleAccount.php.html#51\">App\\Models\\WhaleAccount::needsSync<\/a>"],[0,3,"<a href=\"WhaleAccount.php.html#56\">App\\Models\\WhaleAccount::calculateRewardMultiplier<\/a>"],[0,1,"<a href=\"WhaleAccount.php.html#65\">App\\Models\\WhaleAccount::updateFromWhaleApi<\/a>"],[0,2,"<a href=\"WhaleAccount.php.html#96\">App\\Models\\WhaleAccount::syncNftCollections<\/a>"],[0,2,"<a href=\"WhaleAccount.php.html#112\">App\\Models\\WhaleAccount::getDisplayNameAttribute<\/a>"],[0,1,"<a href=\"WhaleAccount.php.html#117\">App\\Models\\WhaleAccount::getTotalRewardMultiplierAttribute<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -47,8 +47,8 @@ check_command "mysql"
 
 # 检查PHP版本
 PHP_VERSION=$(php -r "echo PHP_VERSION;" | cut -d. -f1,2)
-if (( $(echo "$PHP_VERSION < 8.1" | bc -l) )); then
-    print_error "PHP版本需要 >= 8.1，当前版本: $PHP_VERSION"
+if (( $(echo "$PHP_VERSION < 8.4" | bc -l) )); then
+    print_error "PHP版本需要 >= 8.4，当前版本: $PHP_VERSION"
     exit 1
 fi
 
@@ -227,7 +227,7 @@ server {
     }
 
     location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
         fastcgi_param SCRIPT_FILENAME \$realpath_root\$fastcgi_script_name;
         include fastcgi_params;
         fastcgi_hide_header X-Powered-By;
@@ -270,14 +270,14 @@ fi
 
 # PHP-FPM配置优化
 print_message "优化PHP-FPM配置..."
-PHP_FPM_POOL="/etc/php/8.2/fpm/pool.d/hoho.conf"
+PHP_FPM_POOL="/etc/php/8.4/fpm/pool.d/hoho.conf"
 
 if [ ! -f "$PHP_FPM_POOL" ]; then
     sudo tee $PHP_FPM_POOL > /dev/null <<EOF
 [hoho]
 user = www-data
 group = www-data
-listen = /var/run/php/php8.2-fpm-hoho.sock
+listen = /var/run/php/php8.4-fpm-hoho.sock
 listen.owner = www-data
 listen.group = www-data
 listen.mode = 0660
@@ -302,7 +302,7 @@ fi
 
 # 重启服务
 print_message "重启服务..."
-sudo systemctl reload php8.2-fpm
+sudo systemctl reload php8.4-fpm
 sudo systemctl reload nginx
 
 # 健康检查
@@ -329,7 +329,7 @@ sudo tee /etc/logrotate.d/hoho > /dev/null <<EOF
     notifempty
     create 644 www-data www-data
     postrotate
-        systemctl reload php8.2-fpm
+        systemctl reload php8.4-fpm
     endscript
 }
 EOF

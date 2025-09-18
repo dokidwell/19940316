@@ -56,49 +56,19 @@ class Artwork extends Model
     public function incrementView()
     {
         $this->increment('view_count');
-
-        $multiplier = $this->creator->getWhaleRewardMultiplier();
-        $baseReward = 0.10000000;
-        $reward = $baseReward * $multiplier;
-
-        $this->creator->addPoints(
-            $reward,
-            'view_reward',
-            "作品《{$this->title}》获得浏览奖励",
-            $this
-        );
+        // 社区作品不再产生积分奖励，仅用于学习交流
     }
 
     public function incrementLike()
     {
         $this->increment('like_count');
-
-        $multiplier = $this->creator->getWhaleRewardMultiplier();
-        $baseReward = 0.50000000;
-        $reward = $baseReward * $multiplier;
-
-        $this->creator->addPoints(
-            $reward,
-            'like_reward',
-            "作品《{$this->title}》获得点赞奖励",
-            $this
-        );
+        // 社区作品不再产生积分奖励，仅用于学习交流
     }
 
     public function incrementDownload()
     {
         $this->increment('download_count');
-
-        $multiplier = $this->creator->getWhaleRewardMultiplier();
-        $baseReward = 2.00000000;
-        $reward = $baseReward * $multiplier;
-
-        $this->creator->addPoints(
-            $reward,
-            'download_reward',
-            "作品《{$this->title}》获得下载奖励",
-            $this
-        );
+        // 社区作品不再产生积分奖励，仅用于学习交流
     }
 
     public function handlePurchase($buyer, $amount)

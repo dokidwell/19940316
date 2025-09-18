@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArtworkController;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\MarketController;
@@ -23,6 +24,20 @@ use App\Http\Controllers\EcosystemController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Authentication Routes
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');
 
 // Redirect root to artworks (作品)
 Route::get('/', function () {
@@ -87,8 +102,9 @@ Route::prefix('community')->name('community.')->group(function () {
 // 我的 (Profile) Routes
 Route::prefix('profile')->name('profile.')->group(function () {
     Route::get('/', [ProfileController::class, 'index'])->name('index');
+    Route::get('/settings', [ProfileController::class, 'settings'])->name('settings');
     Route::post('/checkin', [ProfileController::class, 'checkin'])->name('checkin');
-    Route::post('/settings', [ProfileController::class, 'updateSettings'])->name('settings');
+    Route::post('/settings', [ProfileController::class, 'updateSettings'])->name('settings.update');
     Route::get('/points-history', [ProfileController::class, 'pointsHistory'])->name('points.history');
 });
 
@@ -131,24 +147,48 @@ Route::prefix('points')->name('points.')->middleware('auth')->group(function () 
 
     // 透明公示
     Route::get('/transparency', [PointsController::class, 'transparency'])->name('transparency');
-    Route::get('/transparency/search', [PointsController::class, 'transparencySearch'])->name('transparency.search');
-    Route::get('/transparency/export', [PointsController::class, 'transparencyExport'])->name('transparency.export');
-    Route::get('/transparency/governance', [PointsController::class, 'governanceActivity'])->name('transparency.governance');
-    Route::get('/transparency/marketplace', [PointsController::class, 'marketplaceActivity'])->name('transparency.marketplace');
-    Route::get('/transparency/whale', [PointsController::class, 'whaleActivity'])->name('transparency.whale');
+});
 
-    // 任务中心
-    Route::get('/tasks', [PointsController::class, 'tasks'])->name('tasks');
-    Route::get('/tasks/api', [PointsController::class, 'tasksApi'])->name('tasks.api');
+// 任务中心 (Task Center) Routes
+Route::prefix('tasks')->name('tasks.')->middleware('auth')->group(function () {
+    Route::get('/', [TaskCenterController::class, 'index'])->name('index');
+    Route::post('/complete', [TaskCenterController::class, 'completeTask'])->name('complete');
 
-    // 系统统计
-    Route::get('/system-stats', [PointsController::class, 'systemStats'])->name('system.stats');
-    Route::get('/public-pool', [PointsController::class, 'publicPoolStats'])->name('public.pool');
-    Route::get('/leaderboard', [PointsController::class, 'leaderboard'])->name('leaderboard');
+    // 消费功能
+    Route::get('/consumptions', [TaskCenterController::class, 'consumptions'])->name('consumptions');
+    Route::post('/purchase', [TaskCenterController::class, 'purchase'])->name('purchase');
+    Route::get('/my-consumptions', [TaskCenterController::class, 'myConsumptions'])->name('my-consumptions');
+});
 
-    // 工具功能
-    Route::post('/validate-amount', [PointsController::class, 'validateAmount'])->name('validate.amount');
-    Route::get('/transaction-types', [PointsController::class, 'transactionTypes'])->name('transaction.types');
+// 管理员路由
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
+    // 经济系统管理
+    Route::prefix('economic')->name('economic.')->group(function () {
+        Route::get('/', [Admin\EconomicController::class, 'index'])->name('index');
+        Route::get('/tasks', [Admin\EconomicController::class, 'tasks'])->name('tasks');
+        Route::get('/consumptions', [Admin\EconomicController::class, 'consumptionScenarios'])->name('consumptions');
+        Route::get('/stats', [Admin\EconomicController::class, 'economicStats'])->name('stats');
+
+        // 任务管理
+        Route::patch('/tasks/{task}/reward', [Admin\EconomicController::class, 'updateTaskReward'])->name('tasks.update-reward');
+        Route::patch('/tasks/{task}/toggle', [Admin\EconomicController::class, 'toggleTask'])->name('tasks.toggle');
+
+        // 消费管理
+        Route::patch('/consumptions/{scenario}/price', [Admin\EconomicController::class, 'updateConsumptionPrice'])->name('consumptions.update-price');
+        Route::patch('/consumptions/{scenario}/toggle', [Admin\EconomicController::class, 'toggleConsumptionScenario'])->name('consumptions.toggle');
+
+        // 积分空投
+        Route::post('/airdrop', [Admin\EconomicController::class, 'airdrop'])->name('airdrop');
+    });
+});
+
+// 透明度相关扩展路由 (放在积分路由组外)
+Route::prefix('transparency')->name('transparency.')->middleware('auth')->group(function () {
+    Route::get('/search', [PointsController::class, 'transparencySearch'])->name('search');
+    Route::get('/export', [PointsController::class, 'transparencyExport'])->name('export');
+    Route::get('/governance', [PointsController::class, 'governanceActivity'])->name('governance');
+    Route::get('/marketplace', [PointsController::class, 'marketplaceActivity'])->name('marketplace');
+    Route::get('/whale', [PointsController::class, 'whaleActivity'])->name('whale');
 });
 
 // 文件上传 (File Upload) Routes

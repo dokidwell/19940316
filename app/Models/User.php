@@ -42,6 +42,16 @@ class User extends Authenticatable
         return $this->hasMany(NftCollection::class);
     }
 
+    public function userTasks()
+    {
+        return $this->hasMany(UserTask::class);
+    }
+
+    public function consumptions()
+    {
+        return $this->hasMany(UserConsumption::class);
+    }
+
     public function addPoints($amount, $type, $description = null, $relatedModel = null)
     {
         $transaction = $this->pointTransactions()->create([
@@ -106,18 +116,23 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'hoho_id',
-        'name',
-        'email',
         'phone',
+        'phone_verified_at',
+        'email',
+        'email_verified_at',
         'password',
-        'avatar',
-        'whale_account_id',
-        'whale_nft_count',
-        'is_verified',
-        'verification_level',
-        'social_links',
-        'bio',
-        'is_active',
+        'nickname',
+        'avatar_url',
+        'avatar_source',
+        'status',
+        'role',
+        'points_balance',
+        'total_points_earned',
+        'total_points_spent',
+        'last_checkin_at',
+        'notification_settings',
+        'referral_code',
+        'referred_by',
     ];
 
     /**
@@ -139,13 +154,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
         'password' => 'hashed',
-        'whale_nft_count' => 'integer',
-        'is_verified' => 'boolean',
-        'verification_level' => 'integer',
-        'social_links' => 'array',
-        'is_active' => 'boolean',
-        'points_balance' => 'decimal:8',
-        'total_points_earned' => 'decimal:8',
-        'total_points_spent' => 'decimal:8',
+        'last_checkin_at' => 'datetime',
+        'notification_settings' => 'array',
+        'points_balance' => 'decimal:6',
+        'total_points_earned' => 'decimal:6',
+        'total_points_spent' => 'decimal:6',
     ];
 }
