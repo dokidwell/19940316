@@ -252,7 +252,7 @@ log_step() {
 }
 
 # 服務器配置
-SERVER_IP="149.129.236.244"
+SERVER_IP="119.45.242.49"
 PROJECT_PATH="/var/www/hoho-new"
 DOMAIN="hohopark.com"
 
@@ -341,7 +341,7 @@ echo
 echo "請在您的服務器上執行以下步驟："
 echo
 echo -e "${GREEN}# 1. 登錄服務器${NC}"
-echo "ssh root@149.129.236.244"
+echo "ssh ubuntu@119.45.242.49"
 echo
 echo -e "${GREEN}# 2. 下載部署腳本${NC}"
 echo "wget https://raw.githubusercontent.com/dokidwell/hoho-new/main/scripts/server-deploy.sh"

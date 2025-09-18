@@ -287,7 +287,7 @@ check_http_responses() {
     fi
 
     # 如果有外部IP，也檢查一下
-    if curl -s -o /dev/null -w "%{http_code}" http://149.129.236.244/ 2>/dev/null | grep -q "200\|302"; then
+    if curl -s -o /dev/null -w "%{http_code}" http://119.45.242.49/ 2>/dev/null | grep -q "200\|302"; then
         record_check 0 "外部IP HTTP響應"
     else
         record_check 1 "外部IP HTTP響應"
@@ -360,7 +360,7 @@ generate_health_report() {
         echo "HOHO社區系統健康檢查報告"
         echo "================================="
         echo "檢查時間: $(date)"
-        echo "服務器IP: 149.129.236.244"
+        echo "服務器IP: 119.45.242.49"
         echo "域名: hohopark.com"
         echo "================================="
         echo "檢查結果統計:"

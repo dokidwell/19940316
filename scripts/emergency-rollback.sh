@@ -170,7 +170,7 @@ create_safe_nginx_config() {
     sudo tee $NGINX_CONFIG > /dev/null << 'EOF'
 server {
     listen 80;
-    server_name 149.129.236.244 hohopark.com;
+    server_name 119.45.242.49 hohopark.com;
     root /var/www/hoho-new/public;
 
     index index.php index.html;
@@ -368,7 +368,7 @@ main() {
     echo "================================="
     echo -e "備份位置: ${BLUE}$BACKUP_DIR${NC}"
     echo -e "網站狀態: ${GREEN}已恢復${NC}"
-    echo -e "訪問地址: ${YELLOW}http://149.129.236.244${NC}"
+    echo -e "訪問地址: ${YELLOW}http://119.45.242.49${NC}"
     echo "================================="
     echo
 

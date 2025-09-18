@@ -31,7 +31,7 @@ php-openssl php-pdo php-redis
 
 根据提供的生产环境信息：
 
-- **服务器IP**: 149.129.236.244
+- **服务器IP**: 119.45.242.49
 - **域名**: hoho.community
 - **数据库**: MySQL
 - **数据库名**: hoho

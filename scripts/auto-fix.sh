@@ -103,7 +103,7 @@ create_nginx_config() {
     sudo tee $NGINX_CONFIG > /dev/null << EOF
 server {
     listen 80;
-    server_name 149.129.236.244 hohopark.com www.hohopark.com;
+    server_name 119.45.242.49 hohopark.com www.hohopark.com;
     root /var/www/hoho-new/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
